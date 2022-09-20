@@ -1,0 +1,79 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.recent {
+  width: 100%;
+  margin: 0;
+  height: 300px;
+  padding-bottom: 20px;
+  justify-self: center;
+}
+
+.slide {
+  transform: scale(0.8);
+  transition: transform 300ms;
+  opacity: 1;
+  filter: grayscale(100%);
+  /* border-radius: 15px; */
+}
+
+.slide div {
+  background-color: #ebecee;
+  border-top-width: 20px;
+  border-radius: 15px;
+}
+
+.activeSlide {
+  transform: scale(1);
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.activeSlide div {
+  background-color: #565d70;
+}
+
+/* .activeSlide div .MuiPaper-root {
+  border-radius: 25;
+} */
+
+/* .activeSlide .MuiPaper-root {
+  border-radius: 10%;
+} */
+
+.activeSlide .MuiTypography-root {
+  color: #fff;
+}
+
+.arrow {
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow svg {
+  transition: color 300ms;
+}
+
+.arrow svg:hover {
+  color: #bcbcbd;
+}
+
+.next {
+  right: 10%;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 12px;
+  border-radius: 25px;
+}
+
+.prev {
+  left: 10%;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 12px;
+  border-radius: 25px;
+}
