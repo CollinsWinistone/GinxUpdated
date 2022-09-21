@@ -3,7 +3,7 @@
 import React from "react";
 import Navbar from "./modules/Navbar";
 import Footer from "./modules/Footer";
-import { makeStyles } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { 
     Box, 
     Grid, 

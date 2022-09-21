@@ -8,9 +8,11 @@ import {
     useMediaQuery } from '@mui/material';
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { makeStyles, useTheme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
+import { useTheme } from "@mui/material/styles";
 import axios from 'axios';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import apple from "../../assets/apple1.jfif"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -143,7 +145,7 @@ function Carouselcar({ id }) {
         <div className={classes.carousel}>
         <div
             className={classes.carouselInner}
-            style={{ backgroundImage: `url(${carArray?.images[currImg]})` }}
+            style={{ backgroundImage: `url(${apple})` }}
         >
             <div
                 className={classes.left}

@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import Slider from "react-slick";
 import './brand.css';
 import _ from 'lodash';
-import { makeStyles, useTheme } from "@mui/material/styles";
+import { makeStyles } from '@mui/styles';
+import { useTheme } from "@mui/material/styles";
 import {
   Box,
   Typography,

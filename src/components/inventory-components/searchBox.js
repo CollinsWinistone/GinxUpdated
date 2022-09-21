@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import {  Grid, Button } from '@mui/material';
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 import AdvSearch from "./advSearch";
 import { WholeContext } from '../../App';
 

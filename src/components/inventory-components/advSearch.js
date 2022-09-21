@@ -20,7 +20,8 @@ import { Dialog,
     Link,
     Switch,
     FormControlLabel } from '@mui/material';
-import { makeStyles, useTheme } from "@mui/material/styles";
+    import { makeStyles } from '@mui/styles';
+import { useTheme } from "@mui/material/styles";
 import CloseIcon from '@mui/icons-material/Close';
 import {ToggleButtonGroup, ToggleButton} from '@mui/lab';
 import axios from 'react-axios';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 import {
     Box, 
     Grid, 
@@ -50,7 +50,7 @@ import {
                                             <Typography>
                                                 Mileage <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.mileage}
+                                                {20}
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -73,7 +73,7 @@ import {
                                                 Engine <br/>
                                                 <Box fontWeight="fontWeightBold">
                                                 {/* 27 MPG */}
-                                                {carArray?.engine}
+                                                V8 Engine
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -95,7 +95,7 @@ import {
                                             <Typography>
                                                 Drivetrain <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.drive_train}
+                                                My Drive train
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -117,7 +117,7 @@ import {
                                             <Typography>
                                                 Style Name <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.style_name}
+                                                My Car Style Name
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -139,7 +139,7 @@ import {
                                             <Typography>
                                                 Body Style <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.body_style}
+                                                Body Style
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -161,7 +161,7 @@ import {
                                             <Typography>
                                                 Passenger Capacity <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.passanger_capacity}
+                                                100
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -190,7 +190,7 @@ import {
                                             <Typography>
                                                 Engine <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.engine}
+                                                Engine
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -212,7 +212,7 @@ import {
                                             <Typography>
                                                 Fuel Sysytem <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.fuel_system}
+                                                Fuel System
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -234,7 +234,7 @@ import {
                                             <Typography>
                                                 Drivetrain <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.drive_train}
+                                                Drive Train
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -256,7 +256,7 @@ import {
                                             <Typography>
                                                 Brake Type <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.brake_type}
+                                                Brake Type
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -278,7 +278,7 @@ import {
                                             <Typography>
                                                 ABS Brake System <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.abs_brake}
+                                                ABS Brake system
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -300,7 +300,7 @@ import {
                                             <Typography>
                                                 Wheel Size <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.wheel_size}
+                                                Wheel Size
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -329,7 +329,7 @@ import {
                                             <Typography>
                                                 Airbags <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.air_bags}
+                                                Airbags
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -351,7 +351,7 @@ import {
                                             <Typography>
                                                 ABS Brake System <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.abs_brake}
+                                                ABS Brake system
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -373,7 +373,7 @@ import {
                                             <Typography>
                                                 Traction Control <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.traction_control}
+                                                Traction Control
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -395,7 +395,7 @@ import {
                                             <Typography>
                                                 Night Vision <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.night_vision}
+                                               Night vision
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -417,7 +417,7 @@ import {
                                             <Typography>
                                                 Backup Camera <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.backup_cam}
+                                                Backup camera
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -439,7 +439,7 @@ import {
                                             <Typography>
                                                 Parking Assistant <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.parking_assistant}
+                                                parking Assistant
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -468,7 +468,7 @@ import {
                                             <Typography>
                                                 Stereo Sound Setup <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.stereo_sound}
+                                                Stereo Sound Setup
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -490,7 +490,7 @@ import {
                                             <Typography>
                                                 CD Player <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.cd_player}
+                                                CD Player
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -512,7 +512,7 @@ import {
                                             <Typography>
                                                 DVD Player <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.dvd_player}
+                                                DVD Player
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -534,7 +534,7 @@ import {
                                             <Typography>
                                                 MP3 Player <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.mp3_player}
+                                                mp3 player
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -556,7 +556,7 @@ import {
                                             <Typography>
                                                 Radio <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.radio}
+                                                Radio
                                                 </Box>
                                             </Typography>
                                         </Grid>

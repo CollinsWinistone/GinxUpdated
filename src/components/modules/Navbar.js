@@ -1,7 +1,8 @@
 
 import React from "react";
 import {NavLink} from 'react-router-dom';
-import { alpha, makeStyles } from "@mui/material/styles";
+import { alpha } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -16,38 +17,42 @@ import logo from "../../assets/logo-big.png";
 
 const useStyles = makeStyles((theme) => ({
    navmenu: {
-      marginRight: theme.spacing(6),
+      /** marginRight: theme.spacing(6),*/
+      
       color: "#ddd"
    },
    grow: {
       flexGrow: 1,
    },
    menuButton: {
-      marginRight: theme.spacing(2),
+      /**marginRight: theme.spacing(2), */
+      
    },
    title: {
       display: "none",
-      [theme.breakpoints.up("sm")]: {
+      /**[theme.breakpoints.up("sm")]: {
          display: "block",
-      },
+      }, */
+      
    },
    search: {
       position: "relative",
-      borderRadius: theme.shape.borderRadius,
-      backgroundColor: alpha(theme.palette.common.white, 0.15),
-      "&:hover": {
-         backgroundColor: alpha(theme.palette.common.white, 0.25),
-      },
-      marginRight: theme.spacing(2),
+      /**borderRadius: theme.shape.borderRadius, */
+      
+      // backgroundColor: alpha(theme.palette.common.white, 0.15),
+      // "&:hover": {
+      //    backgroundColor: alpha(theme.palette.common.white, 0.25),
+      // },
+      // marginRight: theme.spacing(2),
       marginLeft: 0,
       width: "100%",
-      [theme.breakpoints.up("sm")]: {
-         marginLeft: theme.spacing(3),
-         width: "auto",
-      },
+      // [theme.breakpoints.up("sm")]: {
+      //    marginLeft: theme.spacing(3),
+      //    width: "auto",
+      // },
    },
    searchIcon: {
-      padding: theme.spacing(0, 2),
+      // padding: theme.spacing(0, 2),
       height: "100%",
       position: "absolute",
       pointerEvents: "none",
@@ -59,26 +64,26 @@ const useStyles = makeStyles((theme) => ({
       color: "inherit",
    },
    inputInput: {
-      padding: theme.spacing(1, 1, 1, 0),
+      // padding: theme.spacing(1, 1, 1, 0),
       // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-      transition: theme.transitions.create("width"),
+      // paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      // transition: theme.transitions.create("width"),
       width: "100%",
-      [theme.breakpoints.up("md")]: {
-         width: "20ch",
-      },
+      // [theme.breakpoints.up("md")]: {
+      //    width: "20ch",
+      // },
    },
    sectionDesktop: {
       display: "none",
-      [theme.breakpoints.up("md")]: {
-         display: "flex",
-      },
+      // [theme.breakpoints.up("md")]: {
+      //    display: "flex",
+      // },
    },
    sectionMobile: {
       display: "flex",
-      [theme.breakpoints.up("md")]: {
-         display: "none",
-      },
+      // [theme.breakpoints.up("md")]: {
+      //    display: "none",
+      // },
    },
 }));
 

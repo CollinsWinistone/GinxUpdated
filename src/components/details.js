@@ -6,7 +6,7 @@ import CarScroll from './inventory-components/carScroll';
 import Overview from './inventory-components/overview';
 import Specification from './inventory-components/specification';
 import PropTypes from 'prop-types';
-import { makeStyles} from "@mui/material/styles";
+import { makeStyles} from "@mui/styles";
 import {
     Box,  
     Grid, 

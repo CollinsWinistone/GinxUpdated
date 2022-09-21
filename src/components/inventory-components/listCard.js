@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Grid, Container, Typography, Paper, CardActionArea } from '@mui/material';
-import { makeStyles } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ToggleButton from '@mui/lab/ToggleButton';
 // import Details from '../details';
+import landCruiser from "../../assets/v8.jfif"
 import { useNavigate, generatePath } from 'react-router-dom';
 
 
@@ -76,14 +77,14 @@ function ListCard({ carArray }) {
                             <Grid container >
                                 <Box>
                                     <Grid item>
-                                    <img className={classes.img} alt="CAR" src={carArray?.images[0]} />
+                                    <img className={classes.img} alt="CAR" src={landCruiser} />
                                     </Grid>
                                 </Box>
                                 <Grid item xs={12} sm={6} container direction="column">
                                     <Box p={2} >
                                         <Typography variant="h5" >
                                             <Box fontWeight="fontWeightBold">
-                                            {carArray?.company}{" "}{carArray?.model}
+                                            "Oxus" "LandCruiser v8"
                                             </Box>
                                         </Typography>
                                         
@@ -96,7 +97,7 @@ function ListCard({ carArray }) {
                                                     Full Price :
                                                 </Box>
                                                 <Box color="#ceba97" > 
-                                                    ${carArray?.price} 
+                                                    $50,000 
                                                 </Box>
                                             {/* </Typography> */}
                                             </Box>
@@ -106,7 +107,7 @@ function ListCard({ carArray }) {
                                                 Monthly :
                                                 </Box>
                                                 <Box color="#ceba97"> 
-                                                ${carArray?.price} 
+                                                $50,000 
                                                 </Box>
                                             {/* </Typography> */}
                                             </Box>
@@ -121,33 +122,33 @@ function ListCard({ carArray }) {
                                         pt={5}>
                                         <Grid item  component={Box} p={1}>
                                             <Typography variant="subtitle1" >
-                                            <Box fontWeight="fontWeightBold"> Year</Box> {carArray?.year}
+                                            <Box fontWeight="fontWeightBold"> Year</Box> 2010
                                             </Typography>
                                         </Grid>
                                         <Grid item component={Box} p={1}>
                                             <Typography variant="subtitle1">
-                                            <Box fontWeight="fontWeightBold"> Fuel</Box>{carArray?.fuel_type}
+                                            <Box fontWeight="fontWeightBold"> Fuel</Box>Diesel
                                             </Typography>
                                         </Grid>
                                         <Grid item component={Box} p={1}>
                                             <Typography variant="subtitle1">
-                                            <Box fontWeight="fontWeightBold">Gear</Box> {carArray?.gear}
+                                            <Box fontWeight="fontWeightBold">Gear</Box> Automatic
                                             </Typography>
                                         </Grid>
                                         <Grid item component={Box} p={1}>
                                             <Typography variant="subtitle1">
-                                            <Box fontWeight="fontWeightBold">Km</Box> {carArray?.km}
+                                            <Box fontWeight="fontWeightBold">Km</Box> 180
                                             </Typography>
                                         </Grid>
                                         <Grid item component={Box} p={1}>
                                             <Typography variant="subtitle1">
                                             <Box fontWeight="fontWeightBold">Body Type </Box>
-                                            {carArray?.body_style}
+                                            SUV bodyStyle
                                             </Typography>
                                         </Grid>
                                         <Grid item component={Box} p={1}>
                                             <Typography variant="subtitle1">
-                                            <Box fontWeight="fontWeightBold">Engine Power</Box>{carArray?.engine_power}
+                                            <Box fontWeight="fontWeightBold">Engine Power</Box>4000KPW
                                             </Typography>
                                         </Grid>
                                     </Box>

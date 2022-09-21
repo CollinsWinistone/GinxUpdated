@@ -3,7 +3,8 @@ import Navbar from './modules/Navbar';
 import Footer from './modules/Footer';
 import Message from './message';
 import { Box, useMediaQuery, Typography, Container } from '@mui/material';
-import { makeStyles, useTheme } from "@mui/material/styles";
+import { makeStyles } from '@mui/styles';
+import {  useTheme } from "@mui/material/styles";
 
 
 const useStyles = makeStyles((theme) => ({

@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 import {
     Box,
     Grid,
@@ -12,9 +12,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: theme.palette.primary.main,
         margin: "50px 0 100px 0",
-        [theme.breakpoints.down('sm')]: {
+        /**[theme.breakpoints.down('sm')]: {
             padding: "50px"
-        },
+        }, */
+        
         [theme.breakpoints.up('md')]: {
             padding: "50px 400px",
 

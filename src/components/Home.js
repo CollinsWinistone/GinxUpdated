@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import { Button, Container, Grid, Link, MenuItem, Typography } from "@mui/material";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -31,18 +31,21 @@ import { WholeContext } from "../App";
 
 const useStyles = makeStyles((theme) => ({
    formControlBtn: {
-      margin: theme.spacing(3),
+     /**margin: theme.spacing(3), */ 
       minWidth: 170,
       minHeight: 50,
    },
    selectEmpty: {
-      marginTop: theme.spacing(2),
+      /**marginTop: theme.spacing(2), */
+      
    },
    diffPaper: {
-      margin: theme.spacing(2),
+      /**margin: theme.spacing(2), */
+      
    },
    formControl: {
-      margin: theme.spacing(1),
+      /**margin: theme.spacing(1), */
+      
       minWidth: 200,
    },
 }));

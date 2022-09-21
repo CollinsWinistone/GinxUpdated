@@ -12,7 +12,8 @@ import {
    CardHeader,
    Divider
 } from '@mui/material';
-import { makeStyles, useTheme } from "@mui/material/styles";
+import { makeStyles } from '@mui/styles';
+import { useTheme } from "@mui/material/styles";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { v4 as uuidv4 } from 'uuid';

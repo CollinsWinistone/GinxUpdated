@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Box, Typography, CardActionArea, CardHeader } from '@mui/material';
 import { Grid, CardContent } from '@mui/material';
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ToggleButton from '@mui/lab/ToggleButton';
 import { useNavigate, generatePath } from 'react-router-dom';
+import car from "../../assets/v8.jfif"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -59,7 +60,7 @@ function GridCard({ carArray }) {
                     setId(carArray._id)
                     id && history.push(generatePath("/cars/:id", { id }))}}>
                 <CardHeader 
-                    title={`${carArray?.company} ${carArray?.model}`}
+                    title={`Ginx`}
                     action={
                         <ToggleButton
                             value={selected}
@@ -78,7 +79,7 @@ function GridCard({ carArray }) {
                         <CardContent>
                             <Box>
                                 <Grid item>
-                                    <img className={classes.img} alt="CAR" src={carArray?.images[0]} />
+                                    <img className={classes.img} alt="CAR" src={car} />
                                 </Grid>
                             </Box>
                             <Box display="flex" 
@@ -89,7 +90,7 @@ function GridCard({ carArray }) {
                                     <Typography>Full Price</Typography> 
                                 </Box>
                                 <Box color="#ceba97" > 
-                                {carArray?.price} 
+                                50000 
                                 </Box>
                             </Box>
                             <Box display="flex" pl={3} >
@@ -97,7 +98,7 @@ function GridCard({ carArray }) {
                                 <Typography>Monthly </Typography>
                                 </Box>
                                 <Box color="#ceba97"> 
-                                {carArray?.price}
+                                50000
                                 </Box>
                             </Box>
                             </Box>

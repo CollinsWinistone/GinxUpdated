@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import cruiser from "../../assets/v8.jfif"
 import { 
     Typography,  
     Paper,
@@ -150,6 +151,7 @@ function CarScroll() {
     const history = useNavigate();
     
     const getUrl = '/cars';
+    const title ="Ginx motors"
 
     useEffect(()=>{
         fetch(getUrl)
@@ -175,8 +177,8 @@ function CarScroll() {
                     component="img"
                     alt="car1"
                     height="150"
-                    image={item.images[1]}
-                    title={item?.company}
+                    image={cruiser}
+                    title={title}
                     
                     />
                 <CardContent>

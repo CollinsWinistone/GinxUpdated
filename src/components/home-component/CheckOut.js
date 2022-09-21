@@ -4,7 +4,7 @@ import {
    Box,
    Typography, Grid,
 } from '@mui/material';
-import { makeStyles} from "@mui/material/styles";
+import { makeStyles} from "@mui/styles";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 import img1 from "./car01.jpg";
@@ -18,9 +18,10 @@ import { v4 as uuidv4 } from 'uuid';
 const useStyles = makeStyles((theme) => ({
    root: {
       height: "400px",
-      [theme.breakpoints.down('sm')]: {
+      /**[theme.breakpoints.down('sm')]: {
          padding: "50px 20px 100px 20px",
-      },
+      }, */
+      
       [theme.breakpoints.up('sm')]: {
          padding: "5px 10px 90px 10px",
          marginBottom: "50px"

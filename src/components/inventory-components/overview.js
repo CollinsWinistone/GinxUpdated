@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import {
     Box, 
     Select, 
@@ -123,7 +123,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                                 Mileage <br/>
                                                 <Box fontWeight="fontWeightBold">
                                                 
-                                                {carArray?.mileage}
+                                                800
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -145,7 +145,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Engine <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.engine}
+                                                V8 Engine
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -167,7 +167,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                             Drivetrain <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.drive_train}
+                                                Drive Train
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -189,7 +189,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Style Name <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.style_name}
+                                                Style Name
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -211,7 +211,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Body Style <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.body_style}
+                                                Body Style
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -233,7 +233,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Brake Type <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.brake_type}
+                                                Brake Type
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -255,7 +255,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Airbags <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.air_bags}
+                                                Airbags
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -277,7 +277,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Night Vision <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.night_vision}
+                                                Night Vision
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -299,7 +299,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Passenger Capacity <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.passanger_capacity}
+                                                Passenger Capacity
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -321,7 +321,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 ABS Brake System <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.abs_brake}
+                                                ABS Brake System
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -343,7 +343,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Backup Camera <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.backup_cam}
+                                                Backup cam
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -365,7 +365,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Stereo Sound <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.stereo_sound}
+                                                Stereo Sound
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -387,7 +387,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 ABS Brake System <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.abs_brake}
+                                                ABS brake system
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -409,7 +409,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Traction Control <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.traction_control}
+                                                Traction Control
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -431,7 +431,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 Parking Assistant <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.parking_assistant}
+                                                Parking assistant
                                                 </Box>
                                             </Typography>
                                         </Grid>
@@ -453,7 +453,7 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
                                             <Typography>
                                                 MP3 Player <br/>
                                                 <Box fontWeight="fontWeightBold">
-                                                {carArray?.mp3_player}
+                                                Mp3 player
                                                 </Box>
                                             </Typography>
                                         </Grid>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, TextField, Grid, Typography, Button, Paper } from '@mui/material';
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 import LanguageIcon from '@mui/icons-material/Language';
 import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -216,8 +216,7 @@ console.log(data);
                             {...register("firstName", {
                                 required: "First Name is required.",
                             })}
-                            error={Boolean(errors.firstName)}
-                            helperText={errors.firstName?.message}
+                            
 
                         /> 
                         <TextField 
@@ -233,8 +232,7 @@ console.log(data);
                             {...register("lastName", {
                                 required: "Last Name is required.",
                             })}
-                            error={Boolean(errors.lastName)}
-                            helperText={errors.lastName?.message}
+        
                             onChange={(e) => {
                                 setLastName(e.target.value);
                             }}
@@ -253,8 +251,7 @@ console.log(data);
                             {...register("email", {
                                 required: "Email is required.",
                             })}
-                            error={Boolean(errors.email)}
-                            helperText={errors.email?.message}
+                           
                             onChange={(e) => {
                                 setEmail(e.target.value);
                             }}
@@ -276,8 +273,7 @@ console.log(data);
                                 required: "Phone number is required.",
                                 
                             })}
-                            error={Boolean(errors.phone)}
-                            helperText={errors.phone?.message}
+                            
                             onChange={(e) => {
                                 setPhone(e.target.value);
                             }}
@@ -296,8 +292,7 @@ console.log(data);
                             {...register("message", {
                                 required: "Message is required.",
                             })}
-                            error={Boolean(errors.message)}
-                            helperText={errors.message?.message}
+                            
                             onChange={(e) => {
                                 setMessage(e.target.value);
                             }}

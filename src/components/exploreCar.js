@@ -5,7 +5,7 @@ import {
    Grid,
    Typography,
 } from '@mui/material';
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from '@mui/styles';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import './explore.css';

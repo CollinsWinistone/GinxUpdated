@@ -6,7 +6,8 @@ import { Dialog,
     Grid, 
     Typography, 
     } from '@mui/material';
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
+
 import CloseIcon from '@mui/icons-material/Close';
 import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -29,13 +30,13 @@ const useStyles = makeStyles((theme) => ({
         // border: 5,
         top:"5px",
         
-        [theme.breakpoints.down('xs')]:{
-            left:"230px", 
+        // [theme.breakpoints.down('xs')]:{
+        //     left:"230px", 
 
-        },
-        [theme.breakpoints.up('sm')]:{
-            left:"530px",
-        },
+        // },
+        // [theme.breakpoints.up('sm')]:{
+        //     left:"530px",
+        // },
     },
     chatBtn: {
         backgroundColor: "#3d4552",
@@ -67,13 +68,13 @@ const useStyles = makeStyles((theme) => ({
         width: "90%",
     },
     DialogContent:{
-        [theme.breakpoints.down('xs')]:{
-            width: "300px", 
+        // [theme.breakpoints.down('xs')]:{
+        //     width: "300px", 
 
-        },
-        [theme.breakpoints.up('sm')]:{
-            width: "600px",
-        },
+        // },
+        // [theme.breakpoints.up('sm')]:{
+        //     width: "600px",
+        // },
     }
 }))
 
