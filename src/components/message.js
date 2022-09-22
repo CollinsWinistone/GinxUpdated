@@ -4,10 +4,13 @@ import { makeStyles } from "@mui/styles";
 import LanguageIcon from '@mui/icons-material/Language';
 import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { useTheme } from '@mui/material';
 import { useForm } from 'react-hook-form';
 
 
-const useStyles = makeStyles((theme) => ({
+
+
+const useStyles = (theme) => ({
     root: {
         '& > *': {
             margin: theme.spacing(0),
@@ -109,12 +112,12 @@ const useStyles = makeStyles((theme) => ({
         },
     }
 
-}));
+});
 
 export default function Message() {
 
-
-    const classes = useStyles();
+    const theme = useTheme()
+    const classes = useStyles(theme);
 
 
     const [ firstName, setFirstName ] = useState('');

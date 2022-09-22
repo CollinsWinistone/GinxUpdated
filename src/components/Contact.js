@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './modules/Navbar';
-import Footer from './modules/Footer';
-import Message from './message';
+// import Navbar from './modules/Navbar';
+// import Footer from './modules/Footer';
+// import Message from './message';
 import { Box, useMediaQuery, Typography, Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import {  useTheme } from "@mui/material/styles";
+import {  useTheme } from "@mui/material";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -16,14 +16,14 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Contact() {
-
-    const classes = useStyles();
     const theme = useTheme();
+    const classes = useStyles(theme);
+    
     const matches = useMediaQuery(theme.breakpoints.down("xs"));
 
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <h1 >"  "</h1>
             <Box className={classes.root}>
             <Container style={{marginBottom: 20, marginTop: "40px"}} >
@@ -50,9 +50,9 @@ export default function Contact() {
                     
                     </Typography>
                 </Container>
-            <Message />
+            {/* <Message /> */}
             </Box>
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     );
 }

@@ -1,11 +1,33 @@
 import React from "react";
+import { makeStyles } from "@mui/styles";
+import {useTheme} from "@mui/material";
+import {styled} from "@mui/material/styles"
 
-export default function Cosa()
-{
+
+
+const useStyles = (theme) => ({
+    root: {
+        width: "auto",
+        textAlign: "center",
+        [theme.breakpoints.up(1201)]:{
+            padding: "100px 150px 150px ",
+        }
+    },
+    colly:{
+        color:theme.palette.primary,
+        background:theme.background,
+    },
+});
+
+const Cosa = ()=>{
+    const theme = useTheme();
+    const classes = useStyles(theme);
+    
     return (
-        <div>
-            <h3>Hello Collins Wanjala</h3>
-            <p>I love programming fundamentals</p>
-        </div>
+        <>
+            <h1 className={classes.colly}>Collins Wanjala</h1>
+        </>
     )
 }
+
+export default Cosa;

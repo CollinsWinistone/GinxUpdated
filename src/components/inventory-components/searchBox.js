@@ -3,8 +3,9 @@ import {  Grid, Button } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import AdvSearch from "./advSearch";
 import { WholeContext } from '../../App';
+import { useTheme } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         flexGrow: 1,
     },
@@ -74,12 +75,13 @@ const useStyles = makeStyles((theme) => ({
         // boxShadow: "1px 1px 20px #aaaaaa",
         color: "#ffffff"
     },
-}))
+});
 
 function SearchBox({searchChange}) {
 
     const { openAdvSch, setOpenAdvSch } = useContext(WholeContext);
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
 
     return(
         <div className={classes.root}>

@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Box, Select, Toolbar, FormControl, 
     Grid, MenuItem, InputLabel } from '@mui/material';
 import { makeStyles} from "@mui/styles";
+import {useTheme} from "@mui/material";
 import ListIcon from '@mui/icons-material/List';
 import AppsIcon from '@mui/icons-material/Apps';
 import ToggleButton from '@mui/lab/ToggleButton';
@@ -9,7 +10,7 @@ import ToggleButtonGroup from '@mui/lab/ToggleButtonGroup';
 import { InventoryContext } from '../../Context/InventoryContext/inventoryContext';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         flexGrow: 1,
     },
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(1),
         minWidth: 120,
     },
-}))
+});
 
 function OptionBar(props) {
 
@@ -64,8 +65,8 @@ function OptionBar(props) {
         }
     };
 
-
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
 
     return(
         <div className={classes.root}>

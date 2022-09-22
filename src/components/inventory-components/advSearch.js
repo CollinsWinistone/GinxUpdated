@@ -21,7 +21,7 @@ import { Dialog,
     Switch,
     FormControlLabel } from '@mui/material';
     import { makeStyles } from '@mui/styles';
-import { useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import {ToggleButtonGroup, ToggleButton} from '@mui/lab';
 import axios from 'react-axios';
@@ -29,7 +29,7 @@ import axios from 'react-axios';
 import { InventoryContext } from '../../Context/InventoryContext/inventoryContext';
 import { WholeContext } from '../../App';
 
-const useStyle = makeStyles((theme) => ({
+const useStyle = (theme) => ({
     root: {
         flexGrow: 1,
         position: "fixed",
@@ -180,8 +180,7 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor: "#c4c4c3",
     },
     
-}))
-
+});
 
 
 function TabPanel(props) {
@@ -226,8 +225,9 @@ function valueDayText(dayValue) {
 }
 
 export default function AdvSearch( props ) {
-    const classes = useStyle();
     const theme = useTheme();
+    const classes = useStyle(theme);
+    
 
     const {
         listItems, setListItems,

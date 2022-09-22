@@ -7,6 +7,7 @@ import { Dialog,
     Typography, 
     } from '@mui/material';
 import { makeStyles } from "@mui/styles";
+import {useTheme} from "@mui/material";
 
 import CloseIcon from '@mui/icons-material/Close';
 import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
@@ -15,7 +16,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import PhoneIcon from '@mui/icons-material/Phone';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         flexGrow: 1,
         position: "fixed",
@@ -76,10 +77,11 @@ const useStyles = makeStyles((theme) => ({
         //     width: "600px",
         // },
     }
-}))
+});
 
 export default function OxusCare(props) {
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
     const { openCare, setOpenCare } = props;
     return(
         <div className={classes.root}>

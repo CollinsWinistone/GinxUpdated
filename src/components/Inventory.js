@@ -14,12 +14,13 @@ import {
 import { makeStyles } from "@mui/styles";
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
+import {useTheme} from "@mui/material";
 import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
 
 import axios from 'axios';
 import { InventoryContext } from '../Context/InventoryContext/inventoryContext';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         width: "auto",
         textAlign: "center"
@@ -36,12 +37,13 @@ const useStyles = makeStyles((theme) => ({
         right: "5%",
         zIndex: theme.zIndex.tooltip,
     }
-}))
+});
 
 
 function Inventory() {
 
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
     // const matches = useMediaQuery(theme.breakpoints.down("xs"));
 
     const [ listItems, setListItems ] = useState([]);

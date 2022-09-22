@@ -12,12 +12,13 @@ import Menu from "@mui/material/Menu";
 import {Button} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import OxusCare from "./oxusCare.js";
+// import OxusCare from "./oxusCare.js";
 import logo from "../../assets/logo-big.png";
+import {useTheme} from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
    navmenu: {
-      /** marginRight: theme.spacing(6),*/
+      marginRight: theme.spacing(6),
       
       color: "#ddd"
    },
@@ -25,34 +26,34 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
    },
    menuButton: {
-      /**marginRight: theme.spacing(2), */
+      marginRight: theme.spacing(2),
       
    },
    title: {
       display: "none",
-      /**[theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("sm")]: {
          display: "block",
-      }, */
+      }, 
       
    },
    search: {
       position: "relative",
-      /**borderRadius: theme.shape.borderRadius, */
+      borderRadius: theme.shape.borderRadius,
       
-      // backgroundColor: alpha(theme.palette.common.white, 0.15),
-      // "&:hover": {
-      //    backgroundColor: alpha(theme.palette.common.white, 0.25),
-      // },
-      // marginRight: theme.spacing(2),
+      backgroundColor: alpha(theme.palette.common.white, 0.15),
+      "&:hover": {
+         backgroundColor: alpha(theme.palette.common.white, 0.25),
+      },
+      marginRight: theme.spacing(2),
       marginLeft: 0,
       width: "100%",
-      // [theme.breakpoints.up("sm")]: {
-      //    marginLeft: theme.spacing(3),
-      //    width: "auto",
-      // },
+      [theme.breakpoints.up("sm")]: {
+         marginLeft: theme.spacing(3),
+         width: "auto",
+      },
    },
    searchIcon: {
-      // padding: theme.spacing(0, 2),
+      padding: theme.spacing(0, 2),
       height: "100%",
       position: "absolute",
       pointerEvents: "none",
@@ -64,31 +65,32 @@ const useStyles = makeStyles((theme) => ({
       color: "inherit",
    },
    inputInput: {
-      // padding: theme.spacing(1, 1, 1, 0),
+      padding: theme.spacing(1, 1, 1, 0),
       // vertical padding + font size from searchIcon
-      // paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-      // transition: theme.transitions.create("width"),
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create("width"),
       width: "100%",
-      // [theme.breakpoints.up("md")]: {
-      //    width: "20ch",
-      // },
+      [theme.breakpoints.up("md")]: {
+         width: "20ch",
+      },
    },
    sectionDesktop: {
       display: "none",
-      // [theme.breakpoints.up("md")]: {
-      //    display: "flex",
-      // },
+      [theme.breakpoints.up("md")]: {
+         display: "flex",
+      },
    },
    sectionMobile: {
       display: "flex",
-      // [theme.breakpoints.up("md")]: {
-      //    display: "none",
-      // },
+      [theme.breakpoints.up("md")]: {
+         display: "none",
+      },
    },
-}));
+});
 
 export default function Navbar() {
-   const classes = useStyles();
+   const theme = useTheme();
+   const classes = useStyles(theme);
    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
    const [openCare, setOpenCare] = React.useState(false);
@@ -220,11 +222,11 @@ export default function Navbar() {
          </AppBar>
          {renderMobileMenu}
          {/* {renderMenu} */}
-         <OxusCare
+         {/* <OxusCare
             openCare={openCare}
             setOpenCare={setOpenCare} >
 
-         </OxusCare>
+         </OxusCare> */}
       </div>
 
    );

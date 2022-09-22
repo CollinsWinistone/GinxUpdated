@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Grid, Container, Typography, Paper, CardActionArea } from '@mui/material';
 import { makeStyles } from "@mui/styles";
+import {useTheme} from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ToggleButton from '@mui/lab/ToggleButton';
 // import Details from '../details';
@@ -8,7 +9,7 @@ import landCruiser from "../../assets/v8.jfif"
 import { useNavigate, generatePath } from 'react-router-dom';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         backgroundColor: "#ffffff",
         paddingTop: theme.spacing(2),
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
             width: "400",
         },
     }
-}))
+});
 
 
 function ListCard({ carArray }) {
@@ -53,8 +54,8 @@ function ListCard({ carArray }) {
     const [ id, setId ] = useState();
     const history = useNavigate();
     
-
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
     
     // console.log(carArray);
     return(

@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Box, Typography, CardActionArea, CardHeader } from '@mui/material';
 import { Grid, CardContent } from '@mui/material';
 import { makeStyles } from "@mui/styles";
+import { useTheme } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ToggleButton from '@mui/lab/ToggleButton';
 import { useNavigate, generatePath } from 'react-router-dom';
 import car from "../../assets/v8.jfif"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         backgroundColor: "#ffffff",
         paddingTop: theme.spacing(2),
@@ -37,14 +38,15 @@ const useStyles = makeStyles((theme) => ({
     //     backgroundColor: "#eae9ea",
     //     objectFit: "scale-down",
     // }
-}))
+});
 
 
 function GridCard({ carArray }) {
 
     // const { carArray } = props.carArray;
 
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
 
     const [ selected, setSelected ] = useState(false);
     const [ id, setId ] = useState();

@@ -1,9 +1,11 @@
 
 
 import React from "react";
-import Navbar from "./modules/Navbar";
-import Footer from "./modules/Footer";
+// import Navbar from "./modules/Navbar";
+// import Footer from "./modules/Footer";
+import {useTheme} from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import Car from "../assets/v8.jfif";
 import { 
     Box, 
     Grid, 
@@ -11,7 +13,7 @@ import {
     Button,  
     Container } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         flexGrow: 1,
         padding: "100px 0px",
@@ -33,12 +35,12 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     img: {
-        // height: 350,
-        // backgroundColor: "#eae9ea",
+        height: 350,
+        backgroundColor: "#eae9ea",
         [theme.breakpoints.down('md')]:{
             width: "100%",
             height: "100%",
-            // margin: "0px 15px",
+            margin: "0px 15px",
         },
         [theme.breakpoints.up('md')]:{
             width: "100%",
@@ -51,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.up('md')]:{
             width: "60%",
-            // display:"flex",
+            display:"flex",
         },
     },
     icon: {
@@ -59,14 +61,15 @@ const useStyles = makeStyles((theme) => ({
         width: "auto",
         borderBlockColor: "black",
     }
-}));
+});
 
 export default function About() {
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
 
     return(
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className={classes.root}> 
                 <Container >
                     <Typography variant="h4" 
@@ -82,7 +85,7 @@ export default function About() {
                     <Grid item className={classes.imgCont} >
                         <img 
                         className={classes.img} 
-                        src="https://thumbs.dreamstime.com/b/image-empty-car-dealership-showroom-interior-paris-france-oct-wide-angle-view-empty-car-dealership-showroom-interior-169124184.jpg"
+                        src={Car}
                         alt="car"  />
                     </Grid>
                     <Grid item className={classes.para} >
@@ -238,7 +241,7 @@ export default function About() {
                 </Grid>
             </Grid>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     );
 }
