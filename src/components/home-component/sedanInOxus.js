@@ -130,7 +130,7 @@ function SedanInOxus() {
          <Slider {...settings}>
             {list.map((item, idx) => (
                <div key={uuidv4()} className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                  {/* <img src={img} alt={img} /> */}
+                  <img src={img} alt={img} />
                   <Paper className={classes.paper}>
                      <CardActionArea>
                         <CardHeader title={
@@ -140,7 +140,7 @@ function SedanInOxus() {
                               </Box>
                            </Typography>
                         } /><Divider/>
-                        {/* <CardMedia image={img}  /> */}
+                        <CardMedia image={img}  />
                         <CardContent>
                            <img className={classes.img}  src={item.images[0]} alt={item.company} />
                            </CardContent>

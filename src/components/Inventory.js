@@ -6,7 +6,6 @@ import ListCard from './inventory-components/listCard';
 import GridCard from './inventory-components/gridCard';
 import SearchBox from './inventory-components/searchBox';
 import OptionBar from './inventory-components/optionBar';
-import useMediaQuery from '@mui/material';
 import { 
     Box, 
     Grid, 
@@ -45,7 +44,7 @@ function Inventory() {
 
     const theme = useTheme();
     const classes = useStyles(theme);
-    const matches = useMediaQuery(theme.breakpoints.down("xs"));
+    //const matches = useMediaQuery(theme.breakpoints.down("xs"));
 
     const [ listItems, setListItems ] = useState([]);
     const [ listvisible, setListVisible ] = useState(3);

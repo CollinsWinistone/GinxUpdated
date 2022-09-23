@@ -1,29 +1,31 @@
-import React from "react";
+import React,{createContext,useState} from "react";
 import About from "../About";
 import Contact from "../Contact";
 import Home from "../Home";
-import Cosa from "../Cosa";
 import Inventory from "../Inventory";
-import Message from "../message";
-import Footer from "../modules/Footer";
-// import Navbar from "../modules/Navbar";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NavBar from "./NavBar";
-import OxusCare from "../modules/oxusCare";
-import "../App.css";
+import "../../App.css";
+export const WholeContext = createContext({});
 
 const App =() => {
+  const [ openAdvSch, setOpenAdvSch ] = useState(false);
     return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<Message />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <WholeContext.Provider value={{openAdvSch, setOpenAdvSch}}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="inventory" element={<Inventory/>}/>
+              <Route path="contact" element={<Contact />} />
+            
+            </Route>
+          </Routes>
+     
+      </BrowserRouter>
+
+      </WholeContext.Provider>
+    
         
      )
 }
