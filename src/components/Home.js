@@ -24,31 +24,32 @@ import CheckOut from './home-component/CheckOut';
 import SedanInOxus from './home-component/sedanInOxus';
 import SUVInOxus from './home-component/suvInOxus';
 import LuxuryInOxus from './home-component/luxuryInOxus';
+import {useTheme} from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { InventoryContext } from "../Context/InventoryContext/inventoryContext";
 import { WholeContext } from "../App";
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
    formControlBtn: {
-     /**margin: theme.spacing(3), */ 
+      margin: theme.spacing(3), 
       minWidth: 170,
       minHeight: 50,
    },
    selectEmpty: {
-      /**marginTop: theme.spacing(2), */
+      marginTop: theme.spacing(2),
       
    },
    diffPaper: {
-      /**margin: theme.spacing(2), */
+      margin: theme.spacing(2),
       
    },
    formControl: {
-      /**margin: theme.spacing(1), */
+      margin: theme.spacing(1),
       
       minWidth: 200,
    },
-}));
+});
 
 const breakPoints = [
    { width: 1, itemsToShow: 1 },
@@ -58,7 +59,8 @@ const breakPoints = [
 ];
 
 export default function Home() {
-   const classes = useStyles();
+   const theme = useTheme();
+   const classes = useStyles(theme);
    const myStyle = {
       height: "100",
       width: "100",

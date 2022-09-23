@@ -6,9 +6,10 @@ import {
     Typography,Paper, InputBase,
     IconButton,
 } from '@mui/material';
+import {useTheme} from '@mui/material'
 import TelegramIcon from '@mui/icons-material/Telegram';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         backgroundColor: theme.palette.primary.main,
         margin: "50px 0 100px 0",
@@ -35,10 +36,11 @@ const useStyles = makeStyles((theme) => ({
     iconButton: {
         padding: 10,
     }
-}));
+});
 
 function SignUp() {
-    const classes = useStyles();
+    const theme = useTheme()
+    const classes = useStyles(theme);
 
     return (
         <div className={classes.root}>

@@ -16,8 +16,9 @@ import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import {useTheme} from "@mui/material"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         [theme.breakpoints.down('sm')]: {
             padding: "50px 20px 100px 20px",
@@ -31,10 +32,11 @@ const useStyles = makeStyles((theme) => ({
         width: "450px"
     }
 
-}));
+});
 
 function LatestNews() {
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
     const NextArrow = ({ onClick }) => {
         return (
             <div className="arw nx" onClick={onClick}>

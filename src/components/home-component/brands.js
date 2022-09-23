@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import './brand.css';
 import _ from 'lodash';
 import { makeStyles } from '@mui/styles';
-import { useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material";
 import {
   Box,
   Typography,
@@ -18,7 +18,7 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   root: {
     flexGrow: 1,
     backgroundImage: "linear-gradient(white, #d9d7d7, white)"
@@ -29,13 +29,14 @@ const useStyles = makeStyles((theme) => ({
       transform: "scale(0.8)"
     }
   }
-}))
+});
 
 export default function Brands() {
   
-  const classes = useStyles();
-
   const theme = useTheme();
+  const classes = useStyles(theme);
+
+  
   const matches = useMediaQuery(theme.breakpoints.down(700));
 
 
@@ -89,24 +90,24 @@ export default function Brands() {
   return(
     <div className={classes.root}>
       <Slider {...settings} 
-      // style={(matches)? {marginBottom:"0px"}:{marginRight: "0px"}}
+      style={(matches)? {marginBottom:"0px"}:{marginRight: "0px"}}
       >
         {logoList.map((item) => (
           <div id='paper' key={uuidv4()}>
-            {/* <Paper className={classes.Paper} elevation={7} > */}
+            <Paper className={classes.Paper} elevation={7} >
               <img src={item} alt="abc" />
-            {/* </Paper> */}
+            </Paper>
           </div>
         ))}
       </Slider>
       <Slider {...settings} 
-      // style={(matches)?{marginTop:"0px"}:{marginLeft: "0px", marginTop:"-85px"}}
+      style={(matches)?{marginTop:"0px"}:{marginLeft: "0px", marginTop:"-85px"}}
       >
         {logoList1.map((item) => (
           <div  id='paper' key={uuidv4()}>
-            {/* <Paper className={classes.Paper} elevation={7} > */}
+            <Paper className={classes.Paper} elevation={7} >
               <img src={item} alt="abc" />
-            {/* </Paper> */}
+            </Paper>
           </div>
         ))}
       </Slider>

@@ -12,16 +12,16 @@ import {
    CardHeader, Divider
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { v4 as uuidv4 } from 'uuid';
-import axios from 'react-axios';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useNavigate, generatePath } from 'react-router-dom';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
    root: {
       width: "100%",
       height: "400px",
@@ -43,12 +43,13 @@ const useStyles = makeStyles((theme) => ({
       },
    },
 
-}))
+});
 
 function LuxuryInOxus() {
 
-   const classes = useStyles();
    const theme = useTheme();
+   const classes = useStyles(theme);
+   
    const matches = useMediaQuery(theme.breakpoints.down(700));
 
    const NextArrow = ({ onClick }) => {

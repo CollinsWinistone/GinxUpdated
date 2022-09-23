@@ -11,11 +11,12 @@ import img1 from "./car01.jpg";
 import img2 from "./car02.jpg";
 import img3 from "./car03.png";
 import img4 from "./car04.jpeg";
+import {useTheme} from "@mui/material"
 import './CheckOut.css';
 import { v4 as uuidv4 } from 'uuid';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
    root: {
       height: "400px",
       /**[theme.breakpoints.down('sm')]: {
@@ -30,13 +31,14 @@ const useStyles = makeStyles((theme) => ({
    }
 
 
-}))
+});
 
 const images = [img1, img2, img3, img4, img1, img2, img3, img4];
 
 function CheckOut() {
 
-   const classes = useStyles();
+   const theme = useTheme();
+   const classes = useStyles(theme);
 
    const NextArrow = ({ onClick }) => {
       return (

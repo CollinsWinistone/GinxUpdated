@@ -17,7 +17,20 @@ function App() {
   const [ openAdvSch, setOpenAdvSch ] = useState(false);
   // console.log(openAdvSch)
   return (
-    <Cosa/>
+    <WholeContext.Provider value={{openAdvSch, setOpenAdvSch}}>
+    <BrowserRouter>
+      <Routes>
+        <Route exact component={Home} path='/' />
+        {/* <Route exact component={Contact} path='/contact' />
+        <Route exact component={Inventory} path='/inventory' />
+        <Route exact component={About} path='/about' />
+        <Route exact path='/cars/:id' > <Details /></Route> */}
+        {/* // render={(props)=><Details id={props.match.params.id} />}  */}
+
+      
+      </Routes>
+    </BrowserRouter>
+    </WholeContext.Provider>
   );
 }
 

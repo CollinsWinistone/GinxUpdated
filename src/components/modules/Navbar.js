@@ -2,7 +2,6 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import { alpha } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -12,7 +11,7 @@ import Menu from "@mui/material/Menu";
 import {Button} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
-// import OxusCare from "./oxusCare.js";
+import OxusCare from "./oxusCare.js";
 import logo from "../../assets/logo-big.png";
 import {useTheme} from "@mui/material";
 
@@ -221,12 +220,11 @@ export default function Navbar() {
             </Toolbar>
          </AppBar>
          {renderMobileMenu}
-         {/* {renderMenu} */}
-         {/* <OxusCare
+         <OxusCare
             openCare={openCare}
             setOpenCare={setOpenCare} >
 
-         </OxusCare> */}
+         </OxusCare>
       </div>
 
    );
