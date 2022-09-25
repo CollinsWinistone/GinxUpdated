@@ -89,15 +89,15 @@ export default function OxusCare(props) {
         <Dialog open={openCare} >
             <DialogTitle>
                 <Button 
-                    sx={classes.closeButton}
+                    className={classes.closeButton}
                     onClick={() => setOpenCare(false)}>
                     <CloseIcon />
                 </Button>
             </DialogTitle>
-            <DialogContent sx={classes.DialogContent}>
+            <DialogContent className={classes.DialogContent}>
                 <Grid container direction="column" spacing={2} justify="center" >
                     <Grid item>
-                        <Button sx={classes.chatBtn} >
+                        <Button className={classes.chatBtn} >
                         <QuestionAnswerOutlinedIcon /> &nbsp;
                         <Typography variant="button">
                             Start Chatting
@@ -105,7 +105,7 @@ export default function OxusCare(props) {
                         </Button>
                     </Grid>
                     <Grid item >
-                        <Button sx={classes.wappBtn} >
+                        <Button className={classes.wappBtn} >
                         <WhatsAppIcon /> &nbsp;
                         <Typography variant="button">
                             Chat on WhatsApp
@@ -113,7 +113,7 @@ export default function OxusCare(props) {
                         </Button>
                     </Grid>
                     <Grid item>
-                        <Button sx={classes.fbBtn}>
+                        <Button className={classes.fbBtn}>
                         <FacebookIcon /> &nbsp;
                         <Typography variant="button">
                             Chat on FaceBook
@@ -121,7 +121,7 @@ export default function OxusCare(props) {
                         </Button>
                     </Grid>
                     <Grid item>
-                        <Button sx={classes.gmailBtn}>
+                        <Button className={classes.gmailBtn}>
                         <MailOutlineOutlinedIcon /> &nbsp;
                         <Typography variant="button">
                             Send an Email
@@ -129,7 +129,7 @@ export default function OxusCare(props) {
                         </Button>
                     </Grid>
                     <Grid item>
-                        <Button sx={classes.phoneBtn}>
+                        <Button className={classes.phoneBtn}>
                         <PhoneIcon /> &nbsp;
                         <Typography variant="button">
                             Copy Phone Number

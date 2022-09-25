@@ -20,7 +20,8 @@ const useStyles = createUseStyles((theme) => ({
    navmenu: {
       marginRight: theme.spacing(6),
       
-      color: "#ddd"
+       color: "#ddd"
+      // color:"red",
      
    },
    grow: {
@@ -164,35 +165,35 @@ export default function Navbar() {
                <div className={classes.sectionDesktop}>
                   <Typography sx={classes.navmenu}>
                      <NavLink
-                        sx={classes.navmenu}
+                        style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
                         to="/"
                      >
                         {" "}
                         Home{" "}
                      </NavLink>
                      <NavLink
-                        sx={classes.navmenu}
+                        style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
                         to="/Inventory"
                      >
                         {" "}
                         Inventory{" "}
                      </NavLink>
                      <NavLink
-                        sx={classes.navmenu}
+                        style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
                         to="/About"
                      >
                         {" "}
                         About{" "}
                      </NavLink>
                      <NavLink
-                        sx={classes.navmenu}
+                        style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
                         to="/Contact"
                      >
                         {" "}
                         Contact{" "}
                      </NavLink>
                      <Button
-                        sx={classes.navmenu}
+                        style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
                         onClick={() => setOpenCare(true)}
                         
                      >
@@ -200,7 +201,7 @@ export default function Navbar() {
                         Oxus Car Care{" "}
                      </Button>
                      <NavLink
-                        sx={classes.navmenu}
+                        style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
                         to="/Inventory"
                      >
                         {" "}

@@ -311,7 +311,7 @@ let cancelToken
                 </Typography>
                 
                 <Button 
-                sx={classes.closeButton}
+                className={classes.closeButton}
                 onClick={() => setOpenAdvSch(false)}>
                     <CloseIcon />
                 </Button>
@@ -325,7 +325,7 @@ let cancelToken
                         placeholder="Find a Car..."    
                     />
                     <Button
-                        sx={classes.searchButton}
+                        className={classes.searchButton}
                     >
                         Search
                     </Button>
@@ -336,7 +336,7 @@ let cancelToken
                 <Container style={{flexGrow:1, height: 450}}>
                 <Grid container>
                     <Grid item  md={3}>
-                    <FormControl variant="outlined" sx={classes.formControl}>
+                    <FormControl variant="outlined" className={classes.formControl}>
                         <InputLabel>Make</InputLabel>
                         <Select
                         value={make}
@@ -351,7 +351,7 @@ let cancelToken
                     </FormControl>
                     </Grid>
                     <Grid item   md={3}>
-                    <FormControl variant="outlined" sx={classes.formControl}>
+                    <FormControl variant="outlined" className={classes.formControl}>
                         <InputLabel>Model</InputLabel>
                         <Select
                         value={model}
@@ -366,7 +366,7 @@ let cancelToken
                     </FormControl>
                     </Grid>
                     <Grid item  md={3}>
-                    <FormControl variant="outlined" sx={classes.formControl}>
+                    <FormControl variant="outlined" className={classes.formControl}>
                         <InputLabel>Trim</InputLabel>
                         <Select
                         labelId="demo-simple-select-outlined-label"
@@ -385,7 +385,7 @@ let cancelToken
                     </FormControl>
                     </Grid>
                     <Grid item  md={3}>
-                    <FormControl variant="outlined" sx={classes.formControl}>
+                    <FormControl variant="outlined" className={classes.formControl}>
                         <InputLabel id="demo-simple-select-outlined-label">Year</InputLabel>
                         <Select
                         labelId="demo-simple-select-outlined-label"
@@ -499,7 +499,7 @@ let cancelToken
                                     </Grid>
                                 </Grid>
                                 <Grid container>
-                                    <Grid item md={4} sx={classes.rootButtonGrp}>
+                                    <Grid item md={4} className={classes.rootButtonGrp}>
                                     <Typography>Cylinders</Typography>
                                     <ToggleButtonGroup
                                         value={cylinder}
@@ -520,7 +520,7 @@ let cancelToken
                                     </ToggleButtonGroup>
                                     
                                     </Grid>
-                                    <Grid item md={4} sx={classes.rootButtonGrp}>
+                                    <Grid item md={4} className={classes.rootButtonGrp}>
                                     <Typography>Cylinders</Typography>
                                     <ToggleButtonGroup
                                         value={cylinderType}
@@ -541,7 +541,7 @@ let cancelToken
                                     </ToggleButtonGroup>
                                     
                                     </Grid>
-                                    <Grid item md={4} sx={classes.rootButtonGrp}>
+                                    <Grid item md={4} className={classes.rootButtonGrp}>
                                     <Typography>Condition</Typography>
                                     <ToggleButtonGroup
                                         value={condition}
@@ -573,22 +573,22 @@ let cancelToken
                                 <Typography>Exterior Color</Typography>
                                 <ButtonGroup >
                                     
-                                    <Button variant="contained" sx={classes.colbtn1} 
+                                    <Button variant="contained" className={classes.colbtn1} 
                                     onClick={()=> {setExtColor("White")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn2} 
+                                    <Button variant="contained" className={classes.colbtn2} 
                                     onClick={()=> {setExtColor("Black")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn3} 
+                                    <Button variant="contained" className={classes.colbtn3} 
                                     onClick={()=> {setExtColor("Lightgrey")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn4} 
+                                    <Button variant="contained" className={classes.colbtn4} 
                                     onClick={()=> {setExtColor("Darkgrey")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn5} 
+                                    <Button variant="contained" className={classes.colbtn5} 
                                     onClick={()=> {setExtColor("Red")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn6} 
+                                    <Button variant="contained" className={classes.colbtn6} 
                                     onClick={()=> {setExtColor("Any")}} >?</Button>
                                     
                                 </ButtonGroup>
@@ -597,22 +597,22 @@ let cancelToken
                                 <Typography>Interior Color</Typography>
                                 <ButtonGroup >
                                     
-                                    <Button variant="contained" sx={classes.colbtn7} 
+                                    <Button variant="contained" className={classes.colbtn7} 
                                     onClick={()=> {setIntColor("Black")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn8} 
+                                    <Button variant="contained" className={classes.colbtn8} 
                                     onClick={()=> {setIntColor("Green")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn9} 
+                                    <Button variant="contained" className={classes.colbtn9} 
                                     onClick={()=> {setIntColor("Lightbrown")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn10} 
+                                    <Button variant="contained" className={classes.colbtn10} 
                                     onClick={()=> {setIntColor("Grey")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn11} 
+                                    <Button variant="contained" className={classes.colbtn11} 
                                     onClick={()=> {setIntColor("Brown")}} ></Button>
 
-                                    <Button variant="contained" sx={classes.colbtn12} 
+                                    <Button variant="contained" className={classes.colbtn12} 
                                     onClick={()=> {setIntColor("Any")}} >?</Button>
                                     
                                 </ButtonGroup>

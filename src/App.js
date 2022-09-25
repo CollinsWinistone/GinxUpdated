@@ -12,7 +12,7 @@ import SedanInOxus from "./components/home-component/sedanInOxus";
 import {  useTheme } from "@mui/material";
 import ExploreCar from "./components/exploreCar";
 import "./App.css";
-import { HomeMaxSharp, HomeMiniOutlined } from "@mui/icons-material";
+import { HomeMaxSharp, HomeMaxTwoTone, HomeMiniOutlined } from "@mui/icons-material";
 export const WholeContext = createContext({});
 
 const App =() => {
