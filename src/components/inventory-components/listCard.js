@@ -7,9 +7,10 @@ import ToggleButton from '@mui/lab/ToggleButton';
 // import Details from '../details';
 import landCruiser from "../../assets/v8.jfif"
 import { useNavigate, generatePath } from 'react-router-dom';
+import { createUseStyles } from 'react-jss';
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         backgroundColor: "#ffffff",
         paddingTop: theme.spacing(2),
@@ -44,7 +45,7 @@ const useStyles = (theme) => ({
             width: "400",
         },
     }
-});
+}));
 
 
 function ListCard({ carArray }) {

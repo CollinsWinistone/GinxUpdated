@@ -5,7 +5,14 @@ import Contact from "./components/Contact";
 import Inventory from "./components/Inventory";
 import Details from "./components/details";
 import About from "./components/About";
+import Navbar from "./components/modules/Navbar";
+import Footer from "./components/modules/Footer";
+import OxusCare from "./components/modules/oxusCare";
+import SedanInOxus from "./components/home-component/sedanInOxus";
+import {  useTheme } from "@mui/material";
+import ExploreCar from "./components/exploreCar";
 import "./App.css";
+import { HomeMaxSharp, HomeMiniOutlined } from "@mui/icons-material";
 export const WholeContext = createContext({});
 
 const App =() => {

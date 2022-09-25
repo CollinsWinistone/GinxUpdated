@@ -19,9 +19,10 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useNavigate, generatePath } from 'react-router-dom';
+import { createUseStyles } from 'react-jss';
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
    root: {
       width: "100%",
       height: "400px",
@@ -42,7 +43,7 @@ const useStyles = (theme) => ({
          width: 300,
       },
    },
-});
+}));
 
 function SUVInOxus() {
 

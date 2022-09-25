@@ -49,7 +49,7 @@
 }
 
 .arw {
-    /* border: 2px; */
+    border: 2px; 
     background-color: rgb(202, 198, 198);
     color: #000;
     position: absolute;

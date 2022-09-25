@@ -68,16 +68,9 @@ function ExploreCar() {
          name:"Benz",
          img:"Nice img",
          company:"Google",
-         model:"Sports",
          img:car1
       },
-      {
-         name:"V8",
-         img:"The best v8 image",
-         company:"Facebook",
-         model:"suv",
-         img:car01
-      },
+      
       
       
    ];
@@ -125,18 +118,18 @@ function ExploreCar() {
    return (
       <div className={classes.root}>
          <Slider {...settings} style={{height: "400px"}}>
-            {list.map((item) => (
-               <div key={uuidv4()} className= "sld acSlide">
+            {list.map((item, idx) => (
+               <div key={uuidv4()} className={idx === imageIndex ? "sld acSlide" : "sld"}>
                   <Grid container justifyContent="center" alignItems="center" >
                   <img className="image" src={item.img} alt={item.company} />
                   
                   </Grid>
-                  
-                        <Typography align="center" color="primary">
+                  {(idx === imageIndex) ? 
+                        <Typography align="center">
                         <Box fontWeight="fontWeightBold"> {item.company}{" "}{item.model} <br/> {item.year}</Box>
                         
                         </Typography>
-                     
+                     : ""}
                </div>
             ))}
          </Slider>

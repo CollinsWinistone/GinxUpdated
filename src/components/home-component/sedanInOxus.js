@@ -8,20 +8,24 @@ import {
    CardActionArea,
    Grid,
    CardContent,
+   CardMedia,
    useMediaQuery,
    CardHeader, Divider
 } from '@mui/material';
+import img from "../../assets/v8.jfif";
 import { makeStyles } from '@mui/styles';
-import {  useTheme } from "@mui/material";
+// import {  useTheme } from "@mui/material";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import { createUseStyles, useTheme } from 'react-jss';
 
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { useNavigate, generatePath } from 'react-router-dom';
+import { ThemeContext } from 'theming';
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme)=>({
    root: {
       width: "100%",
       height: "400px",
@@ -33,6 +37,9 @@ const useStyles = (theme) => ({
       margin: 0,
       padding: 0,
    },
+   button:{
+      background:theme.colorPrimary,
+   },
    img: {
       height: 200,
       [theme.breakpoints.down(840)]:{
@@ -42,13 +49,14 @@ const useStyles = (theme) => ({
          width: 300,
       },
    },
-});
+}));
 
 
 function SedanInOxus() {
 
+   
+   const classes = useStyles();
    const theme = useTheme();
-   const classes = useStyles(theme);
    
    const matches = useMediaQuery(theme.breakpoints.down(700));
 
@@ -71,20 +79,41 @@ function SedanInOxus() {
    const [imageIndex, setImageIndex] = React.useState(0);
    
    const [ id, setId ] = useState();
-   const history = useNavigate();
-   const [ list, setList ] = useState([]);
+   // const history = useNavigate();
+  
 
-   useEffect(() => {
-      var url = `/home/body_style/sedan`;
-      axios
-      .get(url)
-      .then(res => {
-         setList(res.data.data);
-      })
-      .catch(err => {
-         console.log(err)
-      }) 
-   }, []);
+   //implement axios once i read the documentation
+   //const [ list, setList ] = useState([]);
+
+
+   // useEffect(() => {
+   //    var url = `/home/body_style/sedan`;
+   //    axios
+   //    .get(url)
+   //    .then(res => {
+   //       setList(res.data.data);
+   //    })
+   //    .catch(err => {
+   //       console.log(err)
+   //    }) 
+   // }, []);
+
+   const list = [
+      {
+         name:"Benz",
+         img:"Nice img",
+         company:"Google",
+         model:"V8 latest"
+      },
+      {
+         name:"Landcruiser",
+         img:"v8 image",
+         company:"Facebook",
+         model:"TX latest"
+      }
+      
+      
+   ];
 
    var settings = {
       centerMode: true,
@@ -129,9 +158,9 @@ function SedanInOxus() {
       <div className='recent'>
          <Slider {...settings}>
             {list.map((item, idx) => (
-               <div key={uuidv4()} className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                  <img src={img} alt={img} />
-                  <Paper className={classes.paper}>
+               <div key={uuidv4()} className={idx === 0 ? "slide activeSlide" : "slide"}>
+                  {/* <img src={img} alt={img} /> */}
+                  <Paper sx={classes.paper}>
                      <CardActionArea>
                         <CardHeader title={
                            <Typography align="center" variant="h6" >
@@ -140,9 +169,9 @@ function SedanInOxus() {
                               </Box>
                            </Typography>
                         } /><Divider/>
-                        <CardMedia image={img}  />
+                        {/* <CardMedia image={img}  /> */}
                         <CardContent>
-                           <img className={classes.img}  src={item.images[0]} alt={item.company} />
+                           <img className={classes.img}  src={img} alt="company" />
                            </CardContent>
                         
                         <Divider/>
@@ -154,7 +183,7 @@ function SedanInOxus() {
                                     <Typography variant={matches ? 'subtitle1': 'caption'}>Full Price&nbsp;</Typography>
                                  </Box>
                                  <Box >
-                                    <Typography variant={matches ? 'subtitle1': 'caption'}> ${item.price}</Typography>
+                                    <Typography variant={matches ? 'subtitle1': 'caption'}> 10000</Typography>
                                  </Box>
                               </Grid>
                               <Grid item container justifyContent="center">
@@ -162,16 +191,16 @@ function SedanInOxus() {
                                     <Typography variant={matches ? 'subtitle1': 'caption'}>Monthly&nbsp; </Typography>
                                  </Box>
                                  <Box>
-                                    <Typography variant={matches ? 'subtitle1': 'caption'}> ${item.price}</Typography>
+                                    <Typography variant={matches ? 'subtitle1': 'caption'}> 30000</Typography>
                                  </Box>
                               </Grid>
                            </Box>
                            {(idx === imageIndex) ?
                               <Grid container justifyContent="center">
                                  <Typography align="center" variant={matches ? 'subtitle1': 'caption'}
-                                 onClick={()=> {
-                                    setId(item._id)
-                                    id && history.push(generatePath("/cars/:id", { id }))}}
+                                 // onClick={()=> {
+                                 //    setId(item._id)
+                                 //    id && history.push(generatePath("/cars/:id", { id }))}}
                                  >
                                     View details
                                  </Typography>

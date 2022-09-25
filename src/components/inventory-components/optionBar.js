@@ -8,9 +8,10 @@ import AppsIcon from '@mui/icons-material/Apps';
 import ToggleButton from '@mui/lab/ToggleButton';
 import ToggleButtonGroup from '@mui/lab/ToggleButtonGroup';
 import { InventoryContext } from '../../Context/InventoryContext/inventoryContext';
+import { createUseStyles } from 'react-jss';
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
@@ -23,8 +24,8 @@ const useStyles = (theme) => ({
         display: "flex",
         height: 70,
         [theme.breakpoints.down(1200)]:{
-        // padding: "0px 20px",
-        // padding: "10px 0px",
+        padding: "0px 20px",
+        padding: "10px 0px",
         width: "100vw", 
         // marginLeft:"-50px"
         },
@@ -40,7 +41,7 @@ const useStyles = (theme) => ({
         margin: theme.spacing(1),
         minWidth: 120,
     },
-});
+}));
 
 function OptionBar(props) {
 

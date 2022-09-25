@@ -1,8 +1,8 @@
 
 
 import React from "react";
-// import Navbar from "./modules/Navbar";
-// import Footer from "./modules/Footer";
+import Navbar from "./modules/Navbar";
+import Footer from "./modules/Footer";
 import {useTheme} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Car from "../assets/v8.jfif";
@@ -12,8 +12,9 @@ import {
     Typography, 
     Button,  
     Container } from '@mui/material';
+    import { createUseStyles } from 'react-jss';
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         flexGrow: 1,
         padding: "100px 0px",
@@ -61,7 +62,7 @@ const useStyles = (theme) => ({
         width: "auto",
         borderBlockColor: "black",
     }
-});
+}));
 
 export default function About() {
     const theme = useTheme();
@@ -69,8 +70,8 @@ export default function About() {
 
     return(
         <React.Fragment>
-            {/* <Navbar /> */}
-            <div className={classes.root}> 
+            <Navbar />
+            <div sx={classes.root}> 
                 <Container >
                     <Typography variant="h4" 
                     align="center" 
@@ -81,14 +82,14 @@ export default function About() {
                     </Typography>
                 </Container>
                 <Grid container spacing={3} >
-                <Grid item container direction="row" className={classes.paraCont}>
-                    <Grid item className={classes.imgCont} >
+                <Grid item container direction="row" sx={classes.paraCont}>
+                    <Grid item sx={classes.imgCont} >
                         <img 
                         className={classes.img} 
                         src={Car}
                         alt="car"  />
                     </Grid>
-                    <Grid item className={classes.para} >
+                    <Grid item sx={classes.para} >
                         <Typography variant="subtitle2">
                             <Box lineHeight={2}>
                             Our company works professionally and would connect you with Experienced
@@ -103,9 +104,9 @@ export default function About() {
 
                     </Grid>
                 </Grid>
-                <Grid item container direction="row" className={classes.paraCont}>
+                <Grid item container direction="row" sx={classes.paraCont}>
                     
-                    <Grid item className={classes.para} >
+                    <Grid item sx={classes.para} >
                         <Typography variant="h5" 
                         align="left" 
                         color="primary">
@@ -131,7 +132,7 @@ export default function About() {
                             Read more ...
                         </Button>
                     </Grid>
-                    <Grid item className={classes.imgCont} >
+                    <Grid item sx={classes.imgCont} >
                         <img 
                         className={classes.img}
                         src="https://thumbs.dreamstime.com/b/image-empty-car-dealership-showroom-interior-paris-france-oct-wide-angle-view-empty-car-dealership-showroom-interior-169124184.jpg"
@@ -241,7 +242,7 @@ export default function About() {
                 </Grid>
             </Grid>
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </React.Fragment>
     );
 }

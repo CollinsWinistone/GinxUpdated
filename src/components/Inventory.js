@@ -19,8 +19,9 @@ import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlin
 
 import axios from 'axios';
 import { InventoryContext } from '../Context/InventoryContext/inventoryContext';
+import { createUseStyles } from 'react-jss';
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         width: "auto",
         textAlign: "center"
@@ -37,7 +38,7 @@ const useStyles = (theme) => ({
         right: "5%",
         zIndex: theme.zIndex.tooltip,
     }
-});
+}));
 
 
 function Inventory() {
@@ -130,7 +131,7 @@ function Inventory() {
                 advFilter, setAdvFilter,
             }}>
             <Box 
-            className={classes.root}
+            sx={classes.root}
             >
             <Container style={{ marginTop: "100px"}} >
                     <Typography variant="h4" 
@@ -143,7 +144,7 @@ function Inventory() {
                     </Typography>
                     <Typography 
                     align="center" 
-                    color="textSecondary" 
+                    color="textPrimary" 
                     variant="h6"
                     paragraph >
                     Our company's car inventory
@@ -184,7 +185,7 @@ function Inventory() {
                     
                 
                 :
-                    <Container className={classes.gridCardContainer}>
+                    <Container  sx={classes.gridCardContainer}>
                         <Grid container spacing={5}>
                             {listItems.slice(0, listvisible).map((item) => (
                                 <Grid item sm={6} xs={12} md={4} key={item._id}>
@@ -203,8 +204,9 @@ function Inventory() {
                         </Grid> 
                     </Container>
                 }
-                <Fab color="primary" className={classes.chatFab} 
+                <Fab color="primary"  
                 // onClick={() => { <ChatBot steps={steps} /> }}
+                 sx={classes.chatFab}
                 >
                 <QuestionAnswerOutlinedIcon />
                 </Fab>

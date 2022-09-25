@@ -1,13 +1,21 @@
+import { createTheme } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ThemeProvider, useTheme } from 'react-jss';
+// import App from './components/collinsTests/App';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let theme = createTheme();
 root.render(
+    <ThemeProvider theme={theme}>
+        <App/>
+
+    </ThemeProvider>
   
-    <App />
+    
   
 );
 

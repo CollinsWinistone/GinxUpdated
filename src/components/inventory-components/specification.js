@@ -12,8 +12,9 @@ import {
     import EvStationIcon from '@mui/icons-material/EvStation';
     import BuildIcon from '@mui/icons-material/Build';
     import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
+    import { createUseStyles } from 'react-jss';
 
-    const useStyles = makeStyles((theme) => ({
+    const useStyles = createUseStyles((theme) => ({
         card: {
             backgroundColor: "#f7f1e4",
             [theme.breakpoints.down("xs")]:{

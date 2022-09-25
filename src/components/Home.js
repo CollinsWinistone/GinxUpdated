@@ -28,9 +28,10 @@ import {useTheme} from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { InventoryContext } from "../Context/InventoryContext/inventoryContext";
 import { WholeContext } from "../App";
+import { createUseStyles } from 'react-jss';
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
    formControlBtn: {
       margin: theme.spacing(3), 
       minWidth: 170,
@@ -49,7 +50,7 @@ const useStyles = (theme) => ({
       
       minWidth: 200,
    },
-});
+}));
 
 const breakPoints = [
    { width: 1, itemsToShow: 1 },

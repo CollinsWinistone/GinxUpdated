@@ -6,11 +6,12 @@ import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useTheme } from '@mui/material';
 import { useForm } from 'react-hook-form';
+import { createUseStyles } from 'react-jss';
 
 
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         '& > *': {
             margin: theme.spacing(0),
@@ -112,7 +113,7 @@ const useStyles = (theme) => ({
         },
     }
 
-});
+}));
 
 export default function Message() {
 
@@ -157,36 +158,36 @@ console.log(data);
         <div>
         <Grid container justifyContent="center" alignItems="center" >
             <Paper 
-            className={classes.paper}
+            sx={classes.paper}
             align="left" >
             <Grid container direction="row" className={classes.grid} >
             
             <Box 
-                className={classes.reachusbox}
+                sx={classes.reachusbox}
                 bgcolor="primary.main" 
                 color="background.paper"
             >
                 <Box
-                    className={classes.reachus} >
+                    sx={classes.reachus} >
                     <Typography variant="h6">
                         Reach us
                     </Typography><hr color="white" />
                     
-                    <Typography  className={classes.wrapIcon}>
+                    <Typography  sx={classes.wrapIcon}>
                         <LanguageIcon  /> &nbsp; oxusmotor.com
                     </Typography><br/>
                     
-                    <Typography variant="subtitle1" className={classes.wrapIcon}>
+                    <Typography variant="subtitle1" sx={classes.wrapIcon}>
                         <CallIcon /> &nbsp; (376)196-3920
                     </Typography><br/>
                     
-                    <Typography variant="subtitle1" className={classes.wrapIcon}>
+                    <Typography variant="subtitle1" sx={classes.wrapIcon}>
                         <LocationOnIcon />  &nbsp;
                         4787 Blackwell Street, 
                         Sharjah, United Arab Emirates
                     </Typography>
                 </Box>
-                    <Box className={classes.googlemap} mt={5}>
+                    <Box sx={classes.googlemap} mt={5}>
                     <iframe title="g-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230818.73494937457!2d55.406180553978885!3d25.319562846321514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f5fede7964b%3A0x2a830aa19c1f6d89!2sSharjah%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1623924574886!5m2!1sen!2sin" 
                     width="100%" height="270" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
                     
@@ -194,7 +195,7 @@ console.log(data);
                         
                 </Box>
                 <Box 
-                    className={classes.sendus} 
+                    sx={classes.sendus} 
                     bgcolor="white" 
                     color="text.primary" 
                     
@@ -205,7 +206,7 @@ console.log(data);
                     <form method="POST" id="formsubmit" onSubmit={handleSubmit(onSubmit)}  >
                         <TextField 
                             // id="standard-size-normal"
-                            className={classes.textf}
+                            sx={classes.textf}
                             label="First Name"
                             type="text"
                             InputLabelProps={{
@@ -224,7 +225,7 @@ console.log(data);
                         /> 
                         <TextField 
                             id="standard-size-normal"
-                            className={classes.textf}
+                            sx={classes.textf}
                             label="Last Name"
                             type="text"
                             name="lastName"
@@ -243,7 +244,7 @@ console.log(data);
                         /> <br/>
                         <TextField 
                             id="standard-size-normal"
-                            className={classes.textf}
+                            sx={classes.textf}
                             label="Email"
                             type="email"
                             InputLabelProps={{
@@ -261,7 +262,7 @@ console.log(data);
 
                         /><TextField 
                             id="standard-size-normal"
-                            className={classes.textf}
+                            sx={classes.textf}
                             label="Phone"
                             type="tel"
                             InputLabelProps={{
@@ -285,7 +286,7 @@ console.log(data);
 
                         <TextField 
                             id="standard-size-normal"
-                            className={classes.messagefiels}
+                            sx={classes.messagefiels}
                             label="Message"
                             InputLabelProps={{
                                 shrink: true,

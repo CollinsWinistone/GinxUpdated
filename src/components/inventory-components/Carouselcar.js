@@ -13,9 +13,10 @@ import { useTheme } from "@mui/material/styles";
 import axios from 'axios';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import apple from "../../assets/apple1.jfif"
+import { createUseStyles } from 'react-jss';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = createUseStyles((theme) => ({
     carousel :{
         width: "100%",
         height: "100%",

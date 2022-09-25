@@ -177,7 +177,7 @@ function CarScroll() {
                     component="img"
                     alt="car1"
                     height="150"
-                    image={cruiser}
+                    image={item.images[1]}
                     title={title}
                     
                     />

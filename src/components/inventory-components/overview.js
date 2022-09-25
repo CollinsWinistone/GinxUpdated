@@ -22,8 +22,9 @@ import LocalCarWashIcon from '@mui/icons-material/LocalCarWash';
 import EvStationIcon from '@mui/icons-material/EvStation';
 import BuildIcon from '@mui/icons-material/Build';
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
+import { createUseStyles } from 'react-jss';
 
-    const useStyles = makeStyles((theme) => ({
+    const useStyles = createUseStyles((theme) => ({
         root: {
             width: "auto",
             textAlign: "center"

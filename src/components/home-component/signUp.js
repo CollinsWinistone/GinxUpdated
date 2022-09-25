@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles } from "@mui/styles";
+import { createUseStyles } from 'react-jss';
 import {
     Box,
     Grid,
@@ -9,13 +10,13 @@ import {
 import {useTheme} from '@mui/material'
 import TelegramIcon from '@mui/icons-material/Telegram';
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles( (theme) => ({
     root: {
         backgroundColor: theme.palette.primary.main,
         margin: "50px 0 100px 0",
-        /**[theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('sm')]: {
             padding: "50px"
-        }, */
+        }, 
         
         [theme.breakpoints.up('md')]: {
             padding: "50px 400px",
@@ -36,7 +37,7 @@ const useStyles = (theme) => ({
     iconButton: {
         padding: 10,
     }
-});
+}));
 
 function SignUp() {
     const theme = useTheme()

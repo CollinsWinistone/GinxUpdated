@@ -4,8 +4,9 @@ import { makeStyles } from "@mui/styles";
 import AdvSearch from "./advSearch";
 import { WholeContext } from '../../App';
 import { useTheme } from '@mui/material';
+import { createUseStyles } from 'react-jss';
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
@@ -75,7 +76,7 @@ const useStyles = (theme) => ({
         // boxShadow: "1px 1px 20px #aaaaaa",
         color: "#ffffff"
     },
-});
+}));
 
 function SearchBox({searchChange}) {
 

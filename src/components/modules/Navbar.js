@@ -14,12 +14,14 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import OxusCare from "./oxusCare.js";
 import logo from "../../assets/logo-big.png";
 import {useTheme} from "@mui/material";
+import { createUseStyles } from 'react-jss';
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
    navmenu: {
       marginRight: theme.spacing(6),
       
       color: "#ddd"
+     
    },
    grow: {
       flexGrow: 1,
@@ -85,7 +87,7 @@ const useStyles = (theme) => ({
          display: "none",
       },
    },
-});
+}));
 
 export default function Navbar() {
    const theme = useTheme();
@@ -160,37 +162,37 @@ export default function Navbar() {
             </NavLink>
                <div className={classes.grow} />
                <div className={classes.sectionDesktop}>
-                  <Typography className={classes.navmenu}>
+                  <Typography sx={classes.navmenu}>
                      <NavLink
-                        className={classes.navmenu}
+                        sx={classes.navmenu}
                         to="/"
                      >
                         {" "}
                         Home{" "}
                      </NavLink>
                      <NavLink
-                        className={classes.navmenu}
+                        sx={classes.navmenu}
                         to="/Inventory"
                      >
                         {" "}
                         Inventory{" "}
                      </NavLink>
                      <NavLink
-                        className={classes.navmenu}
+                        sx={classes.navmenu}
                         to="/About"
                      >
                         {" "}
                         About{" "}
                      </NavLink>
                      <NavLink
-                        className={classes.navmenu}
+                        sx={classes.navmenu}
                         to="/Contact"
                      >
                         {" "}
                         Contact{" "}
                      </NavLink>
                      <Button
-                        className={classes.navmenu}
+                        sx={classes.navmenu}
                         onClick={() => setOpenCare(true)}
                         
                      >
@@ -198,7 +200,7 @@ export default function Navbar() {
                         Oxus Car Care{" "}
                      </Button>
                      <NavLink
-                        className={classes.navmenu}
+                        sx={classes.navmenu}
                         to="/Inventory"
                      >
                         {" "}

@@ -6,6 +6,7 @@ import CarScroll from './inventory-components/carScroll';
 import Overview from './inventory-components/overview';
 import Specification from './inventory-components/specification';
 import PropTypes from 'prop-types';
+import { useTheme } from '@mui/material';
 import { makeStyles} from "@mui/styles";
 import {
     Box,  
@@ -14,8 +15,9 @@ import {
     Tabs,
     Tab } from '@mui/material';
 import { useParams } from 'react-router-dom';
+import { createUseStyles } from 'react-jss';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         padding:"100px 0px",
         width: "100%",
@@ -133,7 +135,8 @@ function TabPanel(props) {
     }
 
 function Details() {
-    const classes = useStyles();
+    const theme = useTheme();
+    const classes = useStyles(theme);
     const [value, setValue] = useState(0);
     const [ carArray, setCarArray ] = useState(initialCarArray);
     const { id } = useParams();
@@ -169,11 +172,11 @@ function Details() {
         <React.Fragment>
             <Navbar />
             <div className={classes.root}>
-                <Grid container display="flex" className={classes.imgContainer} >
-                    <Grid item className={classes.carouselContainer}>
+                <Grid container display="flex" sx={classes.imgContainer} >
+                    <Grid item sx={classes.carouselContainer}>
                         <Carouselcar id={id} />
                     </Grid>
-                    <Grid item className={classes.carScroll}>
+                    <Grid item sx={classes.carScroll}>
                         <CarScroll />
                     </Grid>
                 </Grid>

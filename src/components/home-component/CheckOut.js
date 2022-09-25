@@ -14,14 +14,15 @@ import img4 from "./car04.jpeg";
 import {useTheme} from "@mui/material"
 import './CheckOut.css';
 import { v4 as uuidv4 } from 'uuid';
+import { createUseStyles } from 'react-jss';
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
    root: {
       height: "400px",
-      /**[theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('sm')]: {
          padding: "50px 20px 100px 20px",
-      }, */
+      }, 
       
       [theme.breakpoints.up('sm')]: {
          padding: "5px 10px 90px 10px",
@@ -31,7 +32,7 @@ const useStyles = (theme) => ({
    }
 
 
-});
+}));
 
 const images = [img1, img2, img3, img4, img1, img2, img3, img4];
 

@@ -7,38 +7,39 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ToggleButton from '@mui/lab/ToggleButton';
 import { useNavigate, generatePath } from 'react-router-dom';
 import car from "../../assets/v8.jfif"
+import { createUseStyles } from 'react-jss';
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         backgroundColor: "#ffffff",
         paddingTop: theme.spacing(2),
         flexGrow: 1,
         height: "auto",
-        // [theme.breakpoints.down(1200)]:{
-        //     height:"auto",
-        // },
-        // [theme.breakpoints.up(1201)]:{
-        //     height: "30",
-        // },
+        [theme.breakpoints.down(1200)]:{
+            height:"auto",
+        },
+        [theme.breakpoints.up(1201)]:{
+            height: "30",
+        },
     },
     img: {
         height: 260,
         backgroundColor: "#eae9ea",
         [theme.breakpoints.down(840)]:{
-            // padding: "10px",
+            padding: "10px",
             width: "100%",
         },
         [theme.breakpoints.up('sm')]:{
             width: 400,
         },
     },
-    // img: {
-    //     height : "300px", 
-    //     width: "100%", 
-    //     backgroundColor: "#eae9ea",
-    //     objectFit: "scale-down",
-    // }
-});
+    img: {
+        height : "300px", 
+        width: "100%", 
+        backgroundColor: "#eae9ea",
+        objectFit: "scale-down",
+    }
+}));
 
 
 function GridCard({ carArray }) {

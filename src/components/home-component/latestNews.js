@@ -17,8 +17,9 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import {useTheme} from "@mui/material"
+import { createUseStyles } from 'react-jss';
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
     root: {
         [theme.breakpoints.down('sm')]: {
             padding: "50px 20px 100px 20px",
@@ -32,7 +33,7 @@ const useStyles = (theme) => ({
         width: "450px"
     }
 
-});
+}));
 
 function LatestNews() {
     const theme = useTheme();

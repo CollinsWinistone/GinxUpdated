@@ -14,7 +14,7 @@
   transition: transform 300ms;
   opacity: 1;
   filter: grayscale(100%);
-  /* border-radius: 15px; */
+  border-radius: 15px;
 }
 
 .slide div {
@@ -33,13 +33,13 @@
   background-color: #565d70;
 }
 
-/* .activeSlide div .MuiPaper-root {
+.activeSlide div .MuiPaper-root {
   border-radius: 25;
-} */
+} 
 
-/* .activeSlide .MuiPaper-root {
+.activeSlide .MuiPaper-root {
   border-radius: 10%;
-} */
+}
 
 .activeSlide .MuiTypography-root {
   color: #fff;
