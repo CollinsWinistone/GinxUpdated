@@ -172,11 +172,11 @@ function Details() {
         <React.Fragment>
             <Navbar />
             <div className={classes.root}>
-                <Grid container display="flex" sx={classes.imgContainer} >
-                    <Grid item sx={classes.carouselContainer}>
+                <Grid container display="flex" className={classes.imgContainer} >
+                    <Grid item className={classes.carouselContainer}>
                         <Carouselcar id={id} />
                     </Grid>
-                    <Grid item sx={classes.carScroll}>
+                    <Grid item className={classes.carScroll}>
                         <CarScroll />
                     </Grid>
                 </Grid>

@@ -4,6 +4,7 @@ import './brand.css';
 import _ from 'lodash';
 import { makeStyles } from '@mui/styles';
 import { useTheme } from "@mui/material";
+import { createUseStyles } from 'react-jss';
 import {
   Box,
   Typography,
@@ -18,7 +19,7 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 
 
-const useStyles = (theme) => ({
+const useStyles = createUseStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundImage: "linear-gradient(white, #d9d7d7, white)"
@@ -29,7 +30,7 @@ const useStyles = (theme) => ({
       transform: "scale(0.8)"
     }
   }
-});
+}));
 
 export default function Brands() {
   

@@ -26,7 +26,7 @@ export default function Contact() {
         <React.Fragment>
             <Navbar />
             <h1 >"  "</h1>
-            <Box sx={classes.root}>
+            <Box className={classes.root}>
             <Container style={{marginBottom: 20, marginTop: "40px"}} >
                     <Typography variant="h4" 
                     align="center" 

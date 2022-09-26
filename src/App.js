@@ -21,8 +21,8 @@ const App =() => {
       <WholeContext.Provider value={{openAdvSch, setOpenAdvSch}}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />}>
-              <Route index element={<Home />} />
+            <Route path="/" element={<SedanInOxus />}>
+              <Route index element={<SedanInOxus />} />
               <Route path="about" element={<About />} />
               <Route path="inventory" element={<Inventory/>}/>
               <Route path="contact" element={<Contact />} />

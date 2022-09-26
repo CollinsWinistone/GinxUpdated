@@ -131,7 +131,7 @@ function Inventory() {
                 advFilter, setAdvFilter,
             }}>
             <Box 
-            sx={classes.root}
+            className={classes.root}
             >
             <Container style={{ marginTop: "100px"}} >
                     <Typography variant="h4" 
@@ -185,7 +185,7 @@ function Inventory() {
                     
                 
                 :
-                    <Container  sx={classes.gridCardContainer}>
+                    <Container  className={classes.gridCardContainer}>
                         <Grid container spacing={5}>
                             {listItems.slice(0, listvisible).map((item) => (
                                 <Grid item sm={6} xs={12} md={4} key={item._id}>
@@ -206,7 +206,7 @@ function Inventory() {
                 }
                 <Fab color="primary"  
                 // onClick={() => { <ChatBot steps={steps} /> }}
-                 sx={classes.chatFab}
+                 className={classes.chatFab}
                 >
                 <QuestionAnswerOutlinedIcon />
                 </Fab>

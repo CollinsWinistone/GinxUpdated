@@ -18,7 +18,7 @@ export default function Footer() {
      <Typography>
       <Grid container spacing={10}>
        <Grid item xs={12} sm={2}>
-        <img src={logo} alt={logo} />
+        <img src={logo} alt={logo} style={{width:50}} />
        </Grid>
        <Grid item xs={12} sm={3}>
         <Box fontWeight="fontWeightBold" fontSize="h6.fontSize" mb={2}>

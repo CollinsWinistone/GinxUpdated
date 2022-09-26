@@ -5,7 +5,8 @@ import Navbar from "./modules/Navbar";
 import Footer from "./modules/Footer";
 import {useTheme} from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Car from "../assets/v8.jfif";
+import car1 from "./home-component/car3.png";
+import car01 from "./home-component/car4.png";
 import { 
     Box, 
     Grid, 
@@ -36,8 +37,9 @@ const useStyles = createUseStyles((theme) => ({
         },
     },
     img: {
-        height: 350,
-        backgroundColor: "#eae9ea",
+        height: 200,
+        // backgroundColor: "#eae9ea",
+        backgroundColor:'white',
         [theme.breakpoints.down('md')]:{
             width: "100%",
             height: "100%",
@@ -71,7 +73,7 @@ export default function About() {
     return(
         <React.Fragment>
             <Navbar />
-            <div sx={classes.root}> 
+            <div className={classes.root}> 
                 <Container >
                     <Typography variant="h4" 
                     align="center" 
@@ -82,14 +84,14 @@ export default function About() {
                     </Typography>
                 </Container>
                 <Grid container spacing={3} >
-                <Grid item container direction="row" sx={classes.paraCont}>
-                    <Grid item sx={classes.imgCont} >
+                <Grid item container direction="row" className={classes.paraCont}>
+                    <Grid item className={classes.imgCont} >
                         <img 
                         className={classes.img} 
-                        src={Car}
+                        src={car01}
                         alt="car"  />
                     </Grid>
-                    <Grid item sx={classes.para} >
+                    <Grid item className={classes.para} >
                         <Typography variant="subtitle2">
                             <Box lineHeight={2}>
                             Our company works professionally and would connect you with Experienced
@@ -104,9 +106,9 @@ export default function About() {
 
                     </Grid>
                 </Grid>
-                <Grid item container direction="row" sx={classes.paraCont}>
+                <Grid item container direction="row" className={classes.paraCont}>
                     
-                    <Grid item sx={classes.para} >
+                    <Grid item className={classes.para} >
                         <Typography variant="h5" 
                         align="left" 
                         color="primary">
@@ -132,7 +134,7 @@ export default function About() {
                             Read more ...
                         </Button>
                     </Grid>
-                    <Grid item sx={classes.imgCont} >
+                    <Grid item className={classes.imgCont} >
                         <img 
                         className={classes.img}
                         src="https://thumbs.dreamstime.com/b/image-empty-car-dealership-showroom-interior-paris-france-oct-wide-angle-view-empty-car-dealership-showroom-interior-169124184.jpg"

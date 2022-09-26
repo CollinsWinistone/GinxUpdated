@@ -163,7 +163,7 @@ export default function Navbar() {
             </NavLink>
                <div className={classes.grow} />
                <div className={classes.sectionDesktop}>
-                  <Typography sx={classes.navmenu}>
+                  <Typography className={classes.navmenu}>
                      <NavLink
                         style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
                         to="/"

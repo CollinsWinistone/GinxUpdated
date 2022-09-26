@@ -158,36 +158,36 @@ console.log(data);
         <div>
         <Grid container justifyContent="center" alignItems="center" >
             <Paper 
-            sx={classes.paper}
+            className={classes.paper}
             align="left" >
             <Grid container direction="row" className={classes.grid} >
             
             <Box 
-                sx={classes.reachusbox}
+                className={classes.reachusbox}
                 bgcolor="primary.main" 
                 color="background.paper"
             >
                 <Box
-                    sx={classes.reachus} >
+                    className={classes.reachus} >
                     <Typography variant="h6">
                         Reach us
                     </Typography><hr color="white" />
                     
-                    <Typography  sx={classes.wrapIcon}>
+                    <Typography  className={classes.wrapIcon}>
                         <LanguageIcon  /> &nbsp; oxusmotor.com
                     </Typography><br/>
                     
-                    <Typography variant="subtitle1" sx={classes.wrapIcon}>
+                    <Typography variant="subtitle1" className={classes.wrapIcon}>
                         <CallIcon /> &nbsp; (376)196-3920
                     </Typography><br/>
                     
-                    <Typography variant="subtitle1" sx={classes.wrapIcon}>
+                    <Typography variant="subtitle1" className={classes.wrapIcon}>
                         <LocationOnIcon />  &nbsp;
                         4787 Blackwell Street, 
                         Sharjah, United Arab Emirates
                     </Typography>
                 </Box>
-                    <Box sx={classes.googlemap} mt={5}>
+                    <Box className={classes.googlemap} mt={5}>
                     <iframe title="g-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230818.73494937457!2d55.406180553978885!3d25.319562846321514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f5fede7964b%3A0x2a830aa19c1f6d89!2sSharjah%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1623924574886!5m2!1sen!2sin" 
                     width="100%" height="270" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
                     
@@ -195,7 +195,7 @@ console.log(data);
                         
                 </Box>
                 <Box 
-                    sx={classes.sendus} 
+                    className={classes.sendus} 
                     bgcolor="white" 
                     color="text.primary" 
                     
@@ -206,7 +206,7 @@ console.log(data);
                     <form method="POST" id="formsubmit" onSubmit={handleSubmit(onSubmit)}  >
                         <TextField 
                             // id="standard-size-normal"
-                            sx={classes.textf}
+                            className={classes.textf}
                             label="First Name"
                             type="text"
                             InputLabelProps={{
@@ -225,7 +225,7 @@ console.log(data);
                         /> 
                         <TextField 
                             id="standard-size-normal"
-                            sx={classes.textf}
+                            className={classes.textf}
                             label="Last Name"
                             type="text"
                             name="lastName"
@@ -244,7 +244,7 @@ console.log(data);
                         /> <br/>
                         <TextField 
                             id="standard-size-normal"
-                            sx={classes.textf}
+                            className={classes.textf}
                             label="Email"
                             type="email"
                             InputLabelProps={{
@@ -262,7 +262,7 @@ console.log(data);
 
                         /><TextField 
                             id="standard-size-normal"
-                            sx={classes.textf}
+                            className={classes.textf}
                             label="Phone"
                             type="tel"
                             InputLabelProps={{
@@ -286,7 +286,7 @@ console.log(data);
 
                         <TextField 
                             id="standard-size-normal"
-                            sx={classes.messagefiels}
+                            className={classes.messagefiels}
                             label="Message"
                             InputLabelProps={{
                                 shrink: true,

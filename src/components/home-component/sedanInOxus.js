@@ -160,7 +160,7 @@ function SedanInOxus() {
             {list.map((item, idx) => (
                <div key={uuidv4()} className={idx === 0 ? "slide activeSlide" : "slide"}>
                   {/* <img src={img} alt={img} /> */}
-                  <Paper sx={classes.paper}>
+                  <Paper className={classes.paper}>
                      <CardActionArea>
                         <CardHeader title={
                            <Typography align="center" variant="h6" >

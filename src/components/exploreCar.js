@@ -71,13 +71,13 @@ function ExploreCar() {
          model:"Sports",
          img:car1
       },
-      {
-         name:"V8",
-         img:"The best v8 image",
-         company:"Facebook",
-         model:"suv",
-         img:car01
-      },
+      // {
+      //    name:"V8",
+      //    img:"The best v8 image",
+      //    company:"Facebook",
+      //    model:"suv",
+      //    img:car01
+      // },
       
       
    ];
