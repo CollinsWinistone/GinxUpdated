@@ -46,7 +46,7 @@ const useStyles = createUseStyles((theme)=>({
          width: "100%",
       },
       [theme.breakpoints.up('sm')]:{
-         width: 300,
+         width: "100%",
       },
    },
 }));
@@ -110,6 +110,12 @@ function SedanInOxus() {
          img:"v8 image",
          company:"Facebook",
          model:"TX latest"
+      },
+      {
+         name:"Mitsubishi",
+         img:"Pajero image",
+         company:"Facebook",
+         model:"Pajero"
       }
       
       
@@ -119,12 +125,12 @@ function SedanInOxus() {
       centerMode: true,
       infinite: true,
       centerPadding: 0,
-      slidesToShow: 5,
+      slidesToShow: 2,
       speed: 300,
       autoplay: false,
       autoplaySpeed: 3000,
       lazyLoad: true,
-      // dots: true,
+      //dots: true,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       beforeChange: (current, next) => setImageIndex(next),
@@ -132,7 +138,7 @@ function SedanInOxus() {
          {
             breakpoint: 1024,
             settings: {
-               slidesToShow: 3,
+               slidesToShow: 1,
                slidesToScroll: 1,
                infinite: true,
             }
@@ -156,7 +162,7 @@ function SedanInOxus() {
    };
    return (
       <div className='recent'>
-         <Slider >
+         <Slider {...settings}>
             {list.map((item, idx) => (
                <div key={uuidv4()} className={idx === 0 ? "slide activeSlide" : "slide"}>
                   {/* <img src={img} alt={img} /> */}

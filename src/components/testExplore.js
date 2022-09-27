@@ -71,6 +71,24 @@ function ExploreCar() {
          company:"Google",
          img:car1
       },
+      {
+         name:"Benz",
+         img:"Nice img",
+         company:"Google",
+         img:car1
+      },
+      {
+         name:"Benz",
+         img:"Nice img",
+         company:"Google",
+         img:car1
+      },
+      {
+         name:"Benz",
+         img:"Nice img",
+         company:"Google",
+         img:car1
+      },
       
       
       
@@ -118,7 +136,7 @@ function ExploreCar() {
    };
    return (
       <div className={classes.root}>
-         <Slider style={{height:"400px",background:"blue"}}>
+         <Slider {...settings}style={{height:"400px",background:"blue"}}>
             <div className='sld acSlide'>
             <Grid container justifyContent="center" alignItems="center" >
                <img className="image" src={car1} alt="collins motors" />   

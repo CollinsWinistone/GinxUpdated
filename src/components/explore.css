@@ -15,7 +15,7 @@
 
 .acSlide img {
   margin: 0;
-  width: 30rem;
+  width: 20rem;
   height: auto;
   align-self: center;
   
@@ -55,3 +55,5 @@
   padding-inline: 9px;
   border-radius: 25px;
 }
+
+
