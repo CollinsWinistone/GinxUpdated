@@ -11,6 +11,7 @@ import OxusCare from "./components/modules/oxusCare";
 import SedanInOxus from "./components/home-component/sedanInOxus";
 import {  useTheme } from "@mui/material";
 import ExploreCar from "./components/exploreCar";
+import TestExplore from "./components/testExplore"
 import "./App.css";
 import { HomeMaxSharp, HomeMaxTwoTone, HomeMiniOutlined } from "@mui/icons-material";
 export const WholeContext = createContext({});
@@ -21,8 +22,8 @@ const App =() => {
       <WholeContext.Provider value={{openAdvSch, setOpenAdvSch}}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<SedanInOxus />}>
-              <Route index element={<SedanInOxus />} />
+            <Route path="/" element={<TestExplore />}>
+              <Route index element={<TestExplore />} />
               <Route path="about" element={<About />} />
               <Route path="inventory" element={<Inventory/>}/>
               <Route path="contact" element={<Contact />} />

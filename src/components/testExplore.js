@@ -21,7 +21,8 @@ const useStyles = createUseStyles((theme) => ({
    root: {
       width: "100%",
       paddingTop: "1rem",
-      height: "600px"
+      height: "600px",
+      background:"yellow"
    }
 }))
 
@@ -117,22 +118,20 @@ function ExploreCar() {
    };
    return (
       <div className={classes.root}>
-         <Slider {...settings} style={{height: "400px"}}>
-            {list.map((item, idx) => (
-               <div key={uuidv4()} className={idx === imageIndex ? "sld acSlide" : "sld"}>
-                  <Grid container justifyContent="center" alignItems="center" >
-                  <img className="image" src={item.img} alt={item.company} />
-                  
-                  </Grid>
-                  {(idx === imageIndex) ? 
-                        <Typography align="center">
-                        <Box fontWeight="fontWeightBold"> {item.company}{" "}{item.model} <br/> {item.year}</Box>
-                        
-                        </Typography>
-                     : ""}
-               </div>
-            ))}
+         <Slider style={{height:"400px",background:"blue"}}>
+            <div className='sld acSlide'>
+            <Grid container justifyContent="center" alignItems="center" >
+               <img className="image" src={car1} alt="collins motors" />   
+            </Grid>
+
+            <Typography align="center" color="primary">
+               <Box fontWeight="fontWeightBold"> Ginx{" "}Landcruiser V8<br/> 2017</Box>       
+            </Typography>
+
+            </div>
+
          </Slider>
+        
       </div>
    )
 }

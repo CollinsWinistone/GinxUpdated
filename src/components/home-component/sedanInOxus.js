@@ -156,7 +156,7 @@ function SedanInOxus() {
    };
    return (
       <div className='recent'>
-         <Slider {...settings}>
+         <Slider >
             {list.map((item, idx) => (
                <div key={uuidv4()} className={idx === 0 ? "slide activeSlide" : "slide"}>
                   {/* <img src={img} alt={img} /> */}
