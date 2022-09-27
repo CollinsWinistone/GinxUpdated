@@ -16,12 +16,14 @@ import { createUseStyles } from 'react-jss';
 import car1 from "./home-component/car3.png";
 import {useTheme} from '@mui/material';
 import car01 from "./home-component/car4.png";
+import niceCar from "./home-component/card2.png"
 
 const useStyles = createUseStyles((theme) => ({
    root: {
       width: "100%",
       paddingTop: "1rem",
-      height: "600px"
+      height: "600px",
+      
    }
 }))
 
@@ -83,9 +85,15 @@ function ExploreCar() {
          img:"The best v8 image",
          company:"Facebook",
          model:"suv",
+         img:niceCar
+      },
+      {
+         name:"V8",
+         img:"The best v8 image",
+         company:"Facebook",
+         model:"suv",
          img:car01
       },
-      
       
    ];
 
@@ -93,7 +101,7 @@ function ExploreCar() {
       centerMode: true,
       infinite: true,
       centerPadding: 0,
-      slidesToShow: 2,
+      slidesToShow: 3,
       speed: 300,
       autoplay: true,
       autoplaySpeed: 3000,

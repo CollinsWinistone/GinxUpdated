@@ -50,6 +50,12 @@ const useStyles = createUseStyles((theme) => ({
       
       minWidth: 200,
    },
+   exploreBox:{
+      background:theme.palette.primary.main
+   },
+   myButton:{
+      background:theme.palette.secondary.main
+   }
 }));
 
 const breakPoints = [
@@ -94,7 +100,7 @@ export default function Home() {
                year, setYear,
             }}>
          <Navbar />
-         <Box bgcolor="primary.main" style={{ height: "600px", marginTop: "60px", color:"#fff" }}>
+         <Box className={classes.exploreBox} style={{ height: "600px", marginTop: "60px", color:"#fff" }}>
             <Container maxWidth="lg">
                <Typography variant="h4" align="center">
                   <Grid container>
@@ -108,8 +114,8 @@ export default function Home() {
                            Redefined
                         </Box>
                         <Box pt={3}>
-                           <Button variant="contained">
-                              <Typography color="inherit" variant="button">
+                           <Button variant="contained" className={classes.myButton}>
+                              <Typography color="black" variant="button">
                                  Explore Cars
                               </Typography>
                            </Button>
@@ -117,7 +123,7 @@ export default function Home() {
                      </Grid>
                      <Grid item xs={12} sm={3}></Grid>
                   </Grid>
-                  <Box >
+                  <Box>
                      <ExploreCar />
                   </Box>
                   <Box p={5}></Box>

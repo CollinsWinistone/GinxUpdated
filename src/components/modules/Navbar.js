@@ -88,6 +88,9 @@ const useStyles = createUseStyles((theme) => ({
          display: "none",
       },
    },
+   appBar:{
+      background:theme.palette.primary.main
+   }
 }));
 
 export default function Navbar() {
@@ -152,7 +155,7 @@ export default function Navbar() {
 
    return (
       <div className={classes.grow}>
-         <AppBar>
+         <AppBar className={classes.appBar}>
             <Toolbar>
             <NavLink to="/">
                <Typography variant="h6" noWrap>

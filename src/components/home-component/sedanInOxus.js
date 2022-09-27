@@ -13,6 +13,7 @@ import {
    CardHeader, Divider
 } from '@mui/material';
 import img from "../../assets/v8.jfif";
+import car from "./card2.png"
 import { makeStyles } from '@mui/styles';
 // import {  useTheme } from "@mui/material";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
@@ -116,6 +117,12 @@ function SedanInOxus() {
          img:"Pajero image",
          company:"Facebook",
          model:"Pajero"
+      },
+      {
+         name:"Nissan",
+         img:"Probox image",
+         company:"Nissan Probo",
+         model:"840 y2"
       }
       
       
@@ -125,7 +132,7 @@ function SedanInOxus() {
       centerMode: true,
       infinite: true,
       centerPadding: 0,
-      slidesToShow: 2,
+      slidesToShow: 3,
       speed: 300,
       autoplay: false,
       autoplaySpeed: 3000,
@@ -177,7 +184,7 @@ function SedanInOxus() {
                         } /><Divider/>
                         {/* <CardMedia image={img}  /> */}
                         <CardContent>
-                           <img className={classes.img}  src={img} alt="company" />
+                           <img className={classes.img}  src={car} alt="company" />
                            </CardContent>
                         
                         <Divider/>

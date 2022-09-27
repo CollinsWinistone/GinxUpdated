@@ -13,7 +13,7 @@ import logo from "../../assets/logo-big.png";
 export default function Footer() {
  return (
   <footer>
-   <Box bgcolor="primary.main" color="white">
+   <Box bgcolor="#565d70" color="white">
     <Container maxWidth="lg">
      <Typography>
       <Grid container spacing={10}>
