@@ -47,13 +47,13 @@ function SignUp() {
         <div className={classes.root}>
             <Box
                 className={classes.reachusbox}
-                bgcolor="primary.main"
+                bgcolor="#ddd"
                 color="background.paper"
             >
                 <Typography variant="h5"
                     align="center"
                 >
-                    <Box fontWeight="fontWeightBold" style={{ padding: "0px 0px 30px" }} >
+                    <Box fontWeight="fontWeightBold" style={{ padding: "0px 0px 30px",color:"black" }} >
                         Sign up to Get Connected
                     </Box>
                 </Typography>

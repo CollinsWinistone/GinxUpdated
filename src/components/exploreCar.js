@@ -6,8 +6,8 @@ import {
    Typography,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowDownRounded';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRightRounded';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import './explore.css';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
@@ -71,28 +71,32 @@ function ExploreCar() {
          img:"Nice img",
          company:"Google",
          model:"Sports",
-         img:car1
+         img:car1,
+         year:2017
       },
       {
          name:"V8",
          img:"The best v8 image",
          company:"Facebook",
          model:"suv",
-         img:car01
+         img:car01,
+         year:2020
+      },
+      {
+         name:"V8",
+         img:"The best v8 image",
+         company:"Facebook",
+         model:"benz",
+         img:niceCar,
+         year:2020
       },
       {
          name:"V8",
          img:"The best v8 image",
          company:"Facebook",
          model:"suv",
-         img:niceCar
-      },
-      {
-         name:"V8",
-         img:"The best v8 image",
-         company:"Facebook",
-         model:"suv",
-         img:car01
+         img:car01,
+         year:2022
       },
       
    ];
