@@ -100,7 +100,7 @@ export default function Home() {
                year, setYear,
             }}>
          <Navbar />
-         <Box className={classes.exploreBox} style={{ height: "600px", marginTop: "60px", color:"#fff" }}>
+         <Box className={classes.exploreBox} style={{ height: "600px", marginTop: "60px", color:"#fff" ,width:"100vw"}}>
             <Container maxWidth="lg">
                <Typography variant="h4" align="center">
                   <Grid container>

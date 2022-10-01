@@ -26,6 +26,7 @@ const useStyles = createUseStyles((theme) => ({
    },
    grow: {
       flexGrow: 1,
+      
    },
    menuButton: {
       marginRight: theme.spacing(2),
@@ -89,7 +90,8 @@ const useStyles = createUseStyles((theme) => ({
       },
    },
    appBar:{
-      background:theme.palette.primary.main
+      background:theme.palette.primary.main,
+      
    }
 }));
 

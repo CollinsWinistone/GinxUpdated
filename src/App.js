@@ -22,14 +22,10 @@ const App =() => {
       <WholeContext.Provider value={{openAdvSch, setOpenAdvSch}}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />}>
-              <Route index element={<Home />} />
-              <Route path="about" element={<About />} />
-              <Route path="inventory" element={<Inventory/>}/>
-              <Route path="contact" element={<Contact />} />
-              
-            
-            </Route>
+            <Route path="/" element={<Home/>}/>
+            <Route path="contact" element={<Contact/>}/>
+            <Route path="about" element={<About/>}/>
+            <Route path="inventory" element={<Inventory/>}/>
           </Routes>
      
       </BrowserRouter>

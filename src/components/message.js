@@ -30,6 +30,7 @@ const useStyles = createUseStyles((theme) => ({
         height: "100%",
         display: "flex",
         
+        
     },
     wrapIcon: {
         margin: "5px auto",
@@ -50,11 +51,14 @@ const useStyles = createUseStyles((theme) => ({
         [theme.breakpoints.up('sm')]:{
             width: "40%",
         },
+        background:theme.palette.primary.main
     },
     reachus:{
         padding: "50px 50px 0px 50px",
         width: "100%",
         height: "auto",
+        background:theme.palette.primary.main
+        
     },
     sendus:{
         padding: "50px",
@@ -99,6 +103,7 @@ const useStyles = createUseStyles((theme) => ({
             width:"auto",
             height:"auto",
         },
+        
     }, 
     paper: {
         display: "flex",
@@ -111,6 +116,10 @@ const useStyles = createUseStyles((theme) => ({
             width: "80%", 
             marginBottom: "100px"
         },
+        background:theme.palette.primary.main
+    },
+    submitBTn:{
+        background:theme.palette.primary.main
     }
 
 }));
@@ -306,7 +315,7 @@ console.log(data);
                             variant="contained"
                             type="submit" 
                             style={{ padding: "10px", width: "100%", height: "auto", marginTop: "40px" }}
-                            color="primary"
+                            className={classes.submitBTn}
                             // onClick={createMessage}
                         >
                             Submit Message
