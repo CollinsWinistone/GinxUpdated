@@ -8,7 +8,7 @@ import Divider from "@mui/icons-material/SafetyDivider";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import logo from "../../assets/logo-big.png";
+import logo from "../../assets/logomain.png";
 
 export default function Footer() {
  return (
@@ -18,7 +18,7 @@ export default function Footer() {
      <Typography>
       <Grid container spacing={10}>
        <Grid item xs={12} sm={2}>
-        <img src={logo} alt={logo} style={{width:50}} />
+        <img src={logo} alt={logo} style={{width:120}} />
        </Grid>
        <Grid item xs={12} sm={3}>
         <Box fontWeight="fontWeightBold" fontSize="h6.fontSize" mb={2}>
@@ -26,7 +26,7 @@ export default function Footer() {
         </Box>
         <Box mb={1}>
          <Link variant="body2" color="inherit" href="/">
-          About Oxus Motors
+          About Ginx Motors
          </Link>
         </Box>
         <Box mb={1}>
@@ -115,7 +115,7 @@ export default function Footer() {
      </Typography>
      <Divider />
      <Box textAlign="center" pt={{ xs: 2, sm: 2 }} pb={{ xs: 2, sm: 2 }}>
-      ©{new Date().getFullYear()} Oxus Motors. All Rights Reserved.
+      ©{new Date().getFullYear()} Ginx Motors. All Rights Reserved.
      </Box>
     </Container>
    </Box>

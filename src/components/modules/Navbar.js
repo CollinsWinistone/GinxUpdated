@@ -12,7 +12,7 @@ import {Button} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import OxusCare from "./oxusCare.js";
-import logo from "../../assets/logo-big.png";
+import logo from "../../assets/logomain.png";
 import {useTheme} from "@mui/material";
 import { createUseStyles } from 'react-jss';
 
@@ -162,8 +162,8 @@ export default function Navbar() {
             <NavLink to="/">
                <Typography variant="h6" noWrap>
                   <img src={logo} 
-                  height="30" 
-                  alt="OXUS" />
+                  height="50" 
+                  alt="Ginx" />
                </Typography>
             </NavLink>
                <div className={classes.grow} />
@@ -203,7 +203,7 @@ export default function Navbar() {
                         
                      >
                         {" "}
-                        Oxus Car Care{" "}
+                        Ginx Car Care{" "}
                      </Button>
                      <NavLink
                         style={{color:"#ddd",marginRight: theme.spacing(6),textDecoration:"none"}}
